@@ -106,11 +106,11 @@ namespace CapaPresentacion.Formularios.FormsPedido
             {
                 info.Append(producto.Producto.Nombre_producto).Append(Environment.NewLine);
                 info.Append($"{((int)producto.Producto.Precio_producto):C} | ");
-                info.Append(producto.Producto.Descripcion_producto);      
+                info.Append(producto.Producto.Descripcion_producto);
                 this.btnComment.BackgroundImage = Resources.editx64;
                 this.toolTip1.SetToolTip(this.btnComment, "Editar datos del producto");
                 this.btnRemove.Visible = false;
-                this.btnComment.Visible = true;               
+                this.btnComment.Visible = true;
                 this.btnAdd.Visible = true;
             }
             else
@@ -125,6 +125,12 @@ namespace CapaPresentacion.Formularios.FormsPedido
                 this.btnRemove.Visible = true;
                 this.btnAdd.Visible = false;
             }
+
+            if (producto.Producto.Last_stock != null)
+            {
+                info.Append($" Stock {producto.Producto.Last_stock.Amount_stock} {producto.Producto.Last_stock.Type_medition}");
+            }
+
             this.txtInfo.Text = info.ToString();
         }
     }

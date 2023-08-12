@@ -218,6 +218,7 @@ namespace CapaPresentacion.Formularios.FormsPedido
             this.toolTip1.SetToolTip(this.chkFacturar, "Seleccione esta opción si desea facturar el pedido de inmediato, si no lo marca p" +
         "odría facturar después el pedido");
             this.chkFacturar.UseVisualStyleBackColor = true;
+            this.chkFacturar.Visible = false;
             // 
             // btnSave
             // 
