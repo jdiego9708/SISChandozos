@@ -23,9 +23,14 @@ namespace CapaEntidades.Models
                 this.Descripcion_producto = Convert.ToString(row["Descripcion_producto"]);
                 this.Estado_producto = Convert.ToString(row["Estado_producto"]);
 
+                if (row.Table.Columns.Contains("Id_stock"))
+                {
+                    this.Last_stock = new Stock_products(row);
+                }              
+
                 this.Tipo_producto = new Catalogo(row);
                 this.Detail_products = new List<Detail_products>();
-                this.Last_stock = new Stock_products();
+                
             }
             catch (Exception ex)
             {

@@ -472,6 +472,16 @@
         private void ProductoSmall_OnAddButtonClick(object sender, EventArgs e)
         {
             ProductoPedidoBindingModel product = (ProductoPedidoBindingModel)sender;
+
+            if (product.Producto.Last_stock != null)
+            {
+                if (product.Producto.Last_stock.Total_stock == 0)
+                {
+                    Mensajes.MensajeInformacion("¡El producto no tiene Stock, no lo puedes vender!");
+                    return;
+                }
+            }
+
             this.AddProduct(product);
         }
         private void LoadCategorias(string tipo_busqueda, string texto_busqueda)

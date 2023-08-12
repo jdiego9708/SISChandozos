@@ -46,11 +46,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panelMetodosPago = new CapaPresentacion.Controles.CustomGridPanel();
             this.chkDesechables = new System.Windows.Forms.CheckBox();
             this.txtPrecioDesechables = new System.Windows.Forms.TextBox();
             this.txtDomicilio = new System.Windows.Forms.TextBox();
             this.chkDomicilio = new System.Windows.Forms.CheckBox();
-            this.panelMetodosPago = new CapaPresentacion.Controles.CustomGridPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.gbCupon.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -62,8 +62,8 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
-            this.label1.Location = new System.Drawing.Point(593, 6);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(494, 5);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(237, 26);
             this.label1.TabIndex = 0;
@@ -77,20 +77,20 @@
             this.ListaDescuentos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListaDescuentos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
             this.ListaDescuentos.FormattingEnabled = true;
-            this.ListaDescuentos.Location = new System.Drawing.Point(627, 40);
-            this.ListaDescuentos.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.ListaDescuentos.Location = new System.Drawing.Point(522, 32);
+            this.ListaDescuentos.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.ListaDescuentos.Name = "ListaDescuentos";
-            this.ListaDescuentos.Size = new System.Drawing.Size(169, 29);
+            this.ListaDescuentos.Size = new System.Drawing.Size(142, 29);
             this.ListaDescuentos.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
-            this.label2.Location = new System.Drawing.Point(256, 310);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Location = new System.Drawing.Point(213, 250);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(164, 26);
+            this.label2.Size = new System.Drawing.Size(138, 21);
             this.label2.TabIndex = 2;
             this.label2.Text = "Propina mesero:";
             this.label2.Visible = false;
@@ -98,10 +98,10 @@
             // txtPropina
             // 
             this.txtPropina.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
-            this.txtPropina.Location = new System.Drawing.Point(262, 343);
-            this.txtPropina.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.txtPropina.Location = new System.Drawing.Point(218, 277);
+            this.txtPropina.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.txtPropina.Name = "txtPropina";
-            this.txtPropina.Size = new System.Drawing.Size(166, 32);
+            this.txtPropina.Size = new System.Drawing.Size(139, 29);
             this.txtPropina.TabIndex = 3;
             this.txtPropina.Tag = "PROPINA";
             this.txtPropina.Visible = false;
@@ -111,11 +111,11 @@
             this.gbCupon.Controls.Add(this.txtCupon);
             this.gbCupon.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbCupon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
-            this.gbCupon.Location = new System.Drawing.Point(637, 75);
-            this.gbCupon.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.gbCupon.Location = new System.Drawing.Point(531, 61);
+            this.gbCupon.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.gbCupon.Name = "gbCupon";
-            this.gbCupon.Padding = new System.Windows.Forms.Padding(6, 4, 6, 4);
-            this.gbCupon.Size = new System.Drawing.Size(145, 72);
+            this.gbCupon.Padding = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.gbCupon.Size = new System.Drawing.Size(121, 58);
             this.gbCupon.TabIndex = 4;
             this.gbCupon.TabStop = false;
             this.gbCupon.Text = "Cupón o bono";
@@ -123,10 +123,10 @@
             // txtCupon
             // 
             this.txtCupon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
-            this.txtCupon.Location = new System.Drawing.Point(12, 30);
-            this.txtCupon.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.txtCupon.Location = new System.Drawing.Point(10, 24);
+            this.txtCupon.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.txtCupon.Name = "txtCupon";
-            this.txtCupon.Size = new System.Drawing.Size(116, 29);
+            this.txtCupon.Size = new System.Drawing.Size(97, 29);
             this.txtCupon.TabIndex = 5;
             // 
             // lblTotalParcial
@@ -134,8 +134,8 @@
             this.lblTotalParcial.AutoSize = true;
             this.lblTotalParcial.Font = new System.Drawing.Font("Segoe UI Emoji", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalParcial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
-            this.lblTotalParcial.Location = new System.Drawing.Point(134, 7);
-            this.lblTotalParcial.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblTotalParcial.Location = new System.Drawing.Point(112, 6);
+            this.lblTotalParcial.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblTotalParcial.Name = "lblTotalParcial";
             this.lblTotalParcial.Size = new System.Drawing.Size(144, 28);
             this.lblTotalParcial.TabIndex = 21;
@@ -145,21 +145,21 @@
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
-            this.label12.Location = new System.Drawing.Point(3, 8);
-            this.label12.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label12.Location = new System.Drawing.Point(2, 6);
+            this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(134, 26);
+            this.label12.Size = new System.Drawing.Size(111, 21);
             this.label12.TabIndex = 20;
             this.label12.Text = "Total parcial:";
             // 
             // txtObservaciones
             // 
             this.txtObservaciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
-            this.txtObservaciones.Location = new System.Drawing.Point(9, 28);
-            this.txtObservaciones.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.txtObservaciones.Location = new System.Drawing.Point(8, 23);
+            this.txtObservaciones.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
-            this.txtObservaciones.Size = new System.Drawing.Size(251, 124);
+            this.txtObservaciones.Size = new System.Drawing.Size(210, 101);
             this.txtObservaciones.TabIndex = 25;
             // 
             // lblTotal
@@ -168,8 +168,8 @@
             this.lblTotal.BackColor = System.Drawing.Color.White;
             this.lblTotal.Font = new System.Drawing.Font("Segoe UI Emoji", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(89)))), ((int)(((byte)(89)))));
-            this.lblTotal.Location = new System.Drawing.Point(472, 204);
-            this.lblTotal.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblTotal.Location = new System.Drawing.Point(393, 165);
+            this.lblTotal.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(75, 36);
             this.lblTotal.TabIndex = 27;
@@ -181,8 +181,8 @@
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Segoe UI Emoji", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(89)))), ((int)(((byte)(89)))));
-            this.label5.Location = new System.Drawing.Point(373, 204);
-            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label5.Location = new System.Drawing.Point(311, 165);
+            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(105, 36);
             this.label5.TabIndex = 26;
@@ -193,8 +193,8 @@
             this.lblSubtotal.AutoSize = true;
             this.lblSubtotal.Font = new System.Drawing.Font("Segoe UI Emoji", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSubtotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
-            this.lblSubtotal.Location = new System.Drawing.Point(450, 157);
-            this.lblSubtotal.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblSubtotal.Location = new System.Drawing.Point(375, 127);
+            this.lblSubtotal.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblSubtotal.Name = "lblSubtotal";
             this.lblSubtotal.Size = new System.Drawing.Size(144, 28);
             this.lblSubtotal.TabIndex = 29;
@@ -204,10 +204,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
-            this.label6.Location = new System.Drawing.Point(351, 159);
-            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label6.Location = new System.Drawing.Point(292, 128);
+            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(95, 26);
+            this.label6.Size = new System.Drawing.Size(80, 21);
             this.label6.TabIndex = 28;
             this.label6.Text = "Subtotal:";
             // 
@@ -217,8 +217,8 @@
             this.lblPropinaSugerida.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblPropinaSugerida.Font = new System.Drawing.Font("Segoe UI Emoji", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPropinaSugerida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
-            this.lblPropinaSugerida.Location = new System.Drawing.Point(432, 274);
-            this.lblPropinaSugerida.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblPropinaSugerida.Location = new System.Drawing.Point(360, 221);
+            this.lblPropinaSugerida.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblPropinaSugerida.Name = "lblPropinaSugerida";
             this.lblPropinaSugerida.Size = new System.Drawing.Size(90, 28);
             this.lblPropinaSugerida.TabIndex = 30;
@@ -230,10 +230,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
-            this.label4.Location = new System.Drawing.Point(257, 274);
-            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label4.Location = new System.Drawing.Point(214, 221);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(177, 26);
+            this.label4.Size = new System.Drawing.Size(148, 21);
             this.label4.TabIndex = 31;
             this.label4.Text = "Propina sugerida:";
             this.label4.Visible = false;
@@ -246,24 +246,37 @@
             // 
             this.groupBox1.Controls.Add(this.panelMetodosPago);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
-            this.groupBox1.Location = new System.Drawing.Point(9, 240);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.groupBox1.Location = new System.Drawing.Point(8, 194);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 4, 6, 4);
-            this.groupBox1.Size = new System.Drawing.Size(814, 289);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.groupBox1.Size = new System.Drawing.Size(678, 233);
             this.groupBox1.TabIndex = 33;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Método de pago";
+            // 
+            // panelMetodosPago
+            // 
+            this.panelMetodosPago.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelMetodosPago.AutoScroll = true;
+            this.panelMetodosPago.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
+            this.panelMetodosPago.Location = new System.Drawing.Point(8, 27);
+            this.panelMetodosPago.Name = "panelMetodosPago";
+            this.panelMetodosPago.PageSize = 10;
+            this.panelMetodosPago.Size = new System.Drawing.Size(662, 199);
+            this.panelMetodosPago.TabIndex = 0;
             // 
             // chkDesechables
             // 
             this.chkDesechables.AutoSize = true;
             this.chkDesechables.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkDesechables.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
-            this.chkDesechables.Location = new System.Drawing.Point(340, 7);
-            this.chkDesechables.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.chkDesechables.Location = new System.Drawing.Point(283, 6);
+            this.chkDesechables.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.chkDesechables.Name = "chkDesechables";
-            this.chkDesechables.Size = new System.Drawing.Size(215, 30);
+            this.chkDesechables.Size = new System.Drawing.Size(183, 25);
             this.chkDesechables.TabIndex = 34;
             this.chkDesechables.Text = "Cobrar desechables";
             this.chkDesechables.UseVisualStyleBackColor = true;
@@ -271,10 +284,10 @@
             // txtPrecioDesechables
             // 
             this.txtPrecioDesechables.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
-            this.txtPrecioDesechables.Location = new System.Drawing.Point(356, 36);
-            this.txtPrecioDesechables.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.txtPrecioDesechables.Location = new System.Drawing.Point(297, 29);
+            this.txtPrecioDesechables.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.txtPrecioDesechables.Name = "txtPrecioDesechables";
-            this.txtPrecioDesechables.Size = new System.Drawing.Size(166, 32);
+            this.txtPrecioDesechables.Size = new System.Drawing.Size(139, 29);
             this.txtPrecioDesechables.TabIndex = 35;
             this.txtPrecioDesechables.Tag = "0";
             this.txtPrecioDesechables.Visible = false;
@@ -282,10 +295,10 @@
             // txtDomicilio
             // 
             this.txtDomicilio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
-            this.txtDomicilio.Location = new System.Drawing.Point(356, 102);
-            this.txtDomicilio.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.txtDomicilio.Location = new System.Drawing.Point(297, 82);
+            this.txtDomicilio.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.txtDomicilio.Name = "txtDomicilio";
-            this.txtDomicilio.Size = new System.Drawing.Size(166, 32);
+            this.txtDomicilio.Size = new System.Drawing.Size(139, 29);
             this.txtDomicilio.TabIndex = 37;
             this.txtDomicilio.Tag = "0";
             this.txtDomicilio.Visible = false;
@@ -295,38 +308,29 @@
             this.chkDomicilio.AutoSize = true;
             this.chkDomicilio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.chkDomicilio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
-            this.chkDomicilio.Location = new System.Drawing.Point(348, 73);
-            this.chkDomicilio.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.chkDomicilio.Location = new System.Drawing.Point(290, 59);
+            this.chkDomicilio.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.chkDomicilio.Name = "chkDomicilio";
-            this.chkDomicilio.Size = new System.Drawing.Size(188, 30);
+            this.chkDomicilio.Size = new System.Drawing.Size(161, 25);
             this.chkDomicilio.TabIndex = 36;
             this.chkDomicilio.Text = "Cobrar domicilio";
             this.chkDomicilio.UseVisualStyleBackColor = true;
             // 
-            // panelMetodosPago
-            // 
-            this.panelMetodosPago.AutoScroll = true;
-            this.panelMetodosPago.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
-            this.panelMetodosPago.Location = new System.Drawing.Point(9, 34);
-            this.panelMetodosPago.Margin = new System.Windows.Forms.Padding(4);
-            this.panelMetodosPago.Name = "panelMetodosPago";
-            this.panelMetodosPago.PageSize = 10;
-            this.panelMetodosPago.Size = new System.Drawing.Size(794, 246);
-            this.panelMetodosPago.TabIndex = 0;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtObservaciones);
-            this.groupBox2.Location = new System.Drawing.Point(9, 47);
+            this.groupBox2.Location = new System.Drawing.Point(8, 38);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(269, 159);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(224, 128);
             this.groupBox2.TabIndex = 38;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Observaciones";
             // 
             // DescuentosOpcionesPedido
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.groupBox2);
@@ -348,11 +352,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ListaDescuentos);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Segoe UI Emoji", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Margin = new System.Windows.Forms.Padding(6);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "DescuentosOpcionesPedido";
-            this.Size = new System.Drawing.Size(832, 536);
+            this.Size = new System.Drawing.Size(693, 433);
             this.gbCupon.ResumeLayout(false);
             this.gbCupon.PerformLayout();
             this.groupBox1.ResumeLayout(false);
