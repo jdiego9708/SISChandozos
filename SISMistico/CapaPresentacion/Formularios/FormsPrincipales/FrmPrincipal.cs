@@ -910,6 +910,7 @@ namespace CapaPresentacion.Formularios.FormsPrincipales
                 this.btnClientes.Enabled = true;
                 this.btnProductos.Enabled = true;
                 this.btnAdministracion.Enabled = true;
+                this.btnAdminAvanzada.Visible = true;
             }
             else if (datos.Cargo_empleado.Equals("MESERO"))
             {
@@ -917,6 +918,7 @@ namespace CapaPresentacion.Formularios.FormsPrincipales
                 this.btnClientes.Enabled = true;
                 this.btnProductos.Enabled = false;
                 this.btnAdministracion.Enabled = false;
+                this.btnAdminAvanzada.Visible = false;
             }
             else if (datos.Cargo_empleado.Equals("CAJERO"))
             {
@@ -924,6 +926,7 @@ namespace CapaPresentacion.Formularios.FormsPrincipales
                 this.btnClientes.Enabled = true;
                 this.btnProductos.Enabled = false;
                 this.btnAdministracion.Enabled = false;
+                this.btnAdminAvanzada.Visible = false;
             }
             else if (datos.Cargo_empleado.Equals("COCINERO"))
             {
@@ -931,6 +934,7 @@ namespace CapaPresentacion.Formularios.FormsPrincipales
                 this.btnClientes.Enabled = true;
                 this.btnProductos.Enabled = false;
                 this.btnAdministracion.Enabled = false;
+                this.btnAdminAvanzada.Visible = false;
             }
             else
             {
@@ -938,6 +942,7 @@ namespace CapaPresentacion.Formularios.FormsPrincipales
                 this.btnClientes.Enabled = false;
                 this.btnProductos.Enabled = false;
                 this.btnAdministracion.Enabled = false;
+                this.btnAdminAvanzada.Visible = false;
             }
 
             //Id de Juan Diego Administrador
