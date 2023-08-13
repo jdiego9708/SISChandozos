@@ -183,6 +183,8 @@
         {
             try
             {
+                MensajeEspera.ShowWait("Realizando venta, espere...");
+
                 if (!this.Comprobaciones(out Pedidos pedido, out List<Detalle_pedido> detalles, out string rpta))
                     return;
 
@@ -211,6 +213,8 @@
                     };
                     frmFacturarPedido.ShowDialog();
                 }
+
+                MensajeEspera.CloseForm();
 
                 this.OnBtnPedidoSuccess?.Invoke(pedido, e);
                 this.Close();
