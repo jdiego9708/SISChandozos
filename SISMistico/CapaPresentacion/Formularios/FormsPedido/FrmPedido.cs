@@ -192,7 +192,7 @@
                     rpta = NPedido.InsertarPedido(pedido);
 
                 if (!rpta.Equals("OK"))
-                    throw new Exception($"No se pudo insertar el pedido, comuníquese con el administrador | {rpta}");
+                    throw new Exception($"No se pudo insertar el pedido, comuníquese con el administrador | {rpta}");      
 
                 foreach (Detalle_pedido detalle in detalles)
                 {
@@ -201,9 +201,10 @@
                     if (!rpta.Equals("OK"))
                         throw new Exception($"No se pudo insertar un detalle de un pedido, se canceló la operación | {rpta}");
                 }
-
                 if (this.chkFacturar.Checked && this.Pedido == null)
                 {
+                    MensajeEspera.CloseForm();
+
                     FrmFacturarPedido frmFacturarPedido = new FrmFacturarPedido
                     {
                         StartPosition = FormStartPosition.CenterScreen,
