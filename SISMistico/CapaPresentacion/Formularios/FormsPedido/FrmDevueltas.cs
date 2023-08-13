@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaEntidades.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -58,7 +59,7 @@ namespace CapaPresentacion.Formularios.FormsPedido
         }
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            this.OnBtnSaveClick?.Invoke(sender, e);
+            this.OnBtnSaveClick?.Invoke(this, e);
         }
         public void AsignarDatos(decimal total_pagar)
         {
@@ -69,6 +70,8 @@ namespace CapaPresentacion.Formularios.FormsPedido
         public decimal Total_pagar { get; set; }
         public decimal Total_recibido { get; set; }
         public decimal Total_devolver { get; set; }
+        public DataTable DtDetalle{ get; set; }
+        public Ventas Venta { get; set; }
 
         public event EventHandler OnBtnSaveClick;
     }

@@ -171,8 +171,6 @@ namespace CapaPresentacion.Formularios.FormsPedido
         {
             try
             {
-                string rpta = "OK";
-                int id_venta;
                 if (this.panelSubTotal.Visible)
                 {
                     DataTable detalle_pago;
@@ -185,6 +183,8 @@ namespace CapaPresentacion.Formularios.FormsPedido
                         StartPosition = FormStartPosition.CenterScreen,
                         MaximizeBox = false,
                         MinimizeBox = false,
+                        DtDetalle = detalle_pago,
+                        Venta = venta
                     };
                     frmDevueltas.OnBtnSaveClick += FrmDevueltas_OnBtnSaveClick;
                     frmDevueltas.AsignarDatos(venta.Total_final);
@@ -205,10 +205,10 @@ namespace CapaPresentacion.Formularios.FormsPedido
         {
             try
             {
-                DataTable detalle_pago;
-                bool result = this.Comprobaciones(out Ventas venta, out detalle_pago);
-                if (!result)
-                    return;
+                FrmDevueltas frmDevueltas = (FrmDevueltas)sender;
+
+                DataTable detalle_pago = frmDevueltas.DtDetalle;
+                Ventas venta = frmDevueltas.Venta;
 
                 if (detalle_pago != null)
                 {
