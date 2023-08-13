@@ -39,7 +39,6 @@ namespace CapaPresentacion.Formularios.FormsTurnos
             frmReporteStockDiario.ProcessReport(this.Turno.Id_turno);
             frmReporteStockDiario.Show();
         }
-
         private void FrmTurno_Load(object sender, EventArgs e)
         {
             DatosInicioSesion datos = DatosInicioSesion.GetInstancia();
@@ -49,7 +48,6 @@ namespace CapaPresentacion.Formularios.FormsTurnos
             else
                 this.btnHistorialTurnos.Visible = false;
         }
-
         private void BtnRefresh_Click(object sender, EventArgs e)
         {
             string fecha_seleccionada = DateTime.Now.ToString("yyyy-MM-dd");
@@ -272,6 +270,10 @@ namespace CapaPresentacion.Formularios.FormsTurnos
                 if (rpta.Equals("OK"))
                 {
                     this.Turno = turnoNuevo;
+
+                    DatosInicioSesion datos = DatosInicioSesion.GetInstancia();
+                    datos.Turno = turnoNuevo;
+
                     this.BaseChangedSuccess?.Invoke(turnoNuevo, e);
                 }
             }
