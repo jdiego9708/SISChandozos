@@ -56,11 +56,11 @@ namespace CapaPresentacion.Formularios.FormsPedido
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox2.Controls.Add(this.panelCategorias);
-            this.groupBox2.Location = new System.Drawing.Point(14, 117);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(5);
+            this.groupBox2.Location = new System.Drawing.Point(10, 88);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox2.Size = new System.Drawing.Size(205, 502);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(195, 376);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tipos";
@@ -71,11 +71,11 @@ namespace CapaPresentacion.Formularios.FormsPedido
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelCategorias.AutoScroll = true;
-            this.panelCategorias.Location = new System.Drawing.Point(15, 37);
-            this.panelCategorias.Margin = new System.Windows.Forms.Padding(5);
+            this.panelCategorias.Location = new System.Drawing.Point(11, 28);
+            this.panelCategorias.Margin = new System.Windows.Forms.Padding(4);
             this.panelCategorias.Name = "panelCategorias";
             this.panelCategorias.PageSize = 10;
-            this.panelCategorias.Size = new System.Drawing.Size(179, 455);
+            this.panelCategorias.Size = new System.Drawing.Size(175, 341);
             this.panelCategorias.TabIndex = 0;
             // 
             // groupBox3
@@ -86,11 +86,11 @@ namespace CapaPresentacion.Formularios.FormsPedido
             this.groupBox3.Controls.Add(this.btnRefresh);
             this.groupBox3.Controls.Add(this.btnAddProduct);
             this.groupBox3.Controls.Add(this.txtBusqueda);
-            this.groupBox3.Location = new System.Drawing.Point(229, 117);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(5);
+            this.groupBox3.Location = new System.Drawing.Point(209, 92);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox3.Size = new System.Drawing.Size(542, 502);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Size = new System.Drawing.Size(463, 376);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Búsqueda de productos";
@@ -101,11 +101,11 @@ namespace CapaPresentacion.Formularios.FormsPedido
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelProductos.AutoScroll = true;
-            this.panelProductos.Location = new System.Drawing.Point(10, 85);
-            this.panelProductos.Margin = new System.Windows.Forms.Padding(5);
+            this.panelProductos.Location = new System.Drawing.Point(8, 64);
+            this.panelProductos.Margin = new System.Windows.Forms.Padding(4);
             this.panelProductos.Name = "panelProductos";
             this.panelProductos.PageSize = 10;
-            this.panelProductos.Size = new System.Drawing.Size(521, 408);
+            this.panelProductos.Size = new System.Drawing.Size(448, 306);
             this.panelProductos.TabIndex = 1;
             // 
             // btnRefresh
@@ -119,10 +119,10 @@ namespace CapaPresentacion.Formularios.FormsPedido
             this.btnRefresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(5, 35);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(5);
+            this.btnRefresh.Location = new System.Drawing.Point(4, 26);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(40, 40);
+            this.btnRefresh.Size = new System.Drawing.Size(30, 30);
             this.btnRefresh.TabIndex = 29;
             this.toolTip1.SetToolTip(this.btnRefresh, "Agreagr un nuevo producto");
             this.btnRefresh.UseVisualStyleBackColor = true;
@@ -138,10 +138,10 @@ namespace CapaPresentacion.Formularios.FormsPedido
             this.btnAddProduct.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddProduct.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddProduct.Location = new System.Drawing.Point(55, 35);
-            this.btnAddProduct.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAddProduct.Location = new System.Drawing.Point(41, 26);
+            this.btnAddProduct.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(40, 40);
+            this.btnAddProduct.Size = new System.Drawing.Size(30, 30);
             this.btnAddProduct.TabIndex = 28;
             this.toolTip1.SetToolTip(this.btnAddProduct, "Agreagr un nuevo producto");
             this.btnAddProduct.UseVisualStyleBackColor = true;
@@ -151,9 +151,10 @@ namespace CapaPresentacion.Formularios.FormsPedido
             this.txtBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBusqueda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
-            this.txtBusqueda.Location = new System.Drawing.Point(103, 37);
+            this.txtBusqueda.Location = new System.Drawing.Point(77, 28);
+            this.txtBusqueda.Margin = new System.Windows.Forms.Padding(2);
             this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(428, 35);
+            this.txtBusqueda.Size = new System.Drawing.Size(379, 29);
             this.txtBusqueda.TabIndex = 3;
             this.txtBusqueda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.toolTip1.SetToolTip(this.txtBusqueda, "Escriba cualquier texto para buscar productos");
@@ -164,11 +165,11 @@ namespace CapaPresentacion.Formularios.FormsPedido
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.panelPedido);
-            this.groupBox4.Location = new System.Drawing.Point(781, 117);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(5);
+            this.groupBox4.Location = new System.Drawing.Point(676, 88);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox4.Size = new System.Drawing.Size(827, 502);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Size = new System.Drawing.Size(269, 376);
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Pedido";
@@ -181,11 +182,11 @@ namespace CapaPresentacion.Formularios.FormsPedido
             this.panelPedido.AutoScroll = true;
             this.panelPedido.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelPedido.BackgroundImage")));
             this.panelPedido.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panelPedido.Location = new System.Drawing.Point(5, 35);
-            this.panelPedido.Margin = new System.Windows.Forms.Padding(5);
+            this.panelPedido.Location = new System.Drawing.Point(4, 26);
+            this.panelPedido.Margin = new System.Windows.Forms.Padding(4);
             this.panelPedido.Name = "panelPedido";
             this.panelPedido.PageSize = 10;
-            this.panelPedido.Size = new System.Drawing.Size(811, 458);
+            this.panelPedido.Size = new System.Drawing.Size(257, 344);
             this.panelPedido.TabIndex = 0;
             // 
             // gbInfo
@@ -195,11 +196,11 @@ namespace CapaPresentacion.Formularios.FormsPedido
             this.gbInfo.Controls.Add(this.chkFacturar);
             this.gbInfo.Controls.Add(this.btnSave);
             this.gbInfo.Controls.Add(this.txtInfoPedido);
-            this.gbInfo.Location = new System.Drawing.Point(14, 11);
-            this.gbInfo.Margin = new System.Windows.Forms.Padding(5);
+            this.gbInfo.Location = new System.Drawing.Point(10, 8);
+            this.gbInfo.Margin = new System.Windows.Forms.Padding(4);
             this.gbInfo.Name = "gbInfo";
-            this.gbInfo.Padding = new System.Windows.Forms.Padding(5);
-            this.gbInfo.Size = new System.Drawing.Size(1594, 102);
+            this.gbInfo.Padding = new System.Windows.Forms.Padding(4);
+            this.gbInfo.Size = new System.Drawing.Size(935, 76);
             this.gbInfo.TabIndex = 8;
             this.gbInfo.TabStop = false;
             this.gbInfo.Text = "Información";
@@ -210,9 +211,10 @@ namespace CapaPresentacion.Formularios.FormsPedido
             this.chkFacturar.AutoSize = true;
             this.chkFacturar.Checked = true;
             this.chkFacturar.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkFacturar.Location = new System.Drawing.Point(1367, 29);
+            this.chkFacturar.Location = new System.Drawing.Point(765, 23);
+            this.chkFacturar.Margin = new System.Windows.Forms.Padding(2);
             this.chkFacturar.Name = "chkFacturar";
-            this.chkFacturar.Size = new System.Drawing.Size(141, 60);
+            this.chkFacturar.Size = new System.Drawing.Size(111, 46);
             this.chkFacturar.TabIndex = 28;
             this.chkFacturar.Text = "Facturar de \r\ninmediato";
             this.toolTip1.SetToolTip(this.chkFacturar, "Seleccione esta opción si desea facturar el pedido de inmediato, si no lo marca p" +
@@ -232,10 +234,10 @@ namespace CapaPresentacion.Formularios.FormsPedido
             this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(1523, 29);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(5);
+            this.btnSave.Location = new System.Drawing.Point(882, 22);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(60, 60);
+            this.btnSave.Size = new System.Drawing.Size(45, 45);
             this.btnSave.TabIndex = 27;
             this.toolTip1.SetToolTip(this.btnSave, "Terminar este pedido");
             this.btnSave.UseVisualStyleBackColor = true;
@@ -247,32 +249,32 @@ namespace CapaPresentacion.Formularios.FormsPedido
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtInfoPedido.BackColor = System.Drawing.Color.White;
             this.txtInfoPedido.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtInfoPedido.Font = new System.Drawing.Font("Segoe UI Emoji", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInfoPedido.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInfoPedido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
-            this.txtInfoPedido.Location = new System.Drawing.Point(10, 31);
-            this.txtInfoPedido.Margin = new System.Windows.Forms.Padding(5);
+            this.txtInfoPedido.Location = new System.Drawing.Point(8, 23);
+            this.txtInfoPedido.Margin = new System.Windows.Forms.Padding(4);
             this.txtInfoPedido.Multiline = true;
             this.txtInfoPedido.Name = "txtInfoPedido";
             this.txtInfoPedido.ReadOnly = true;
             this.txtInfoPedido.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtInfoPedido.Size = new System.Drawing.Size(1336, 58);
+            this.txtInfoPedido.Size = new System.Drawing.Size(751, 44);
             this.txtInfoPedido.TabIndex = 0;
             this.txtInfoPedido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FrmPedido
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1622, 633);
+            this.ClientSize = new System.Drawing.Size(958, 475);
             this.Controls.Add(this.gbInfo);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
-            this.Font = new System.Drawing.Font("Segoe UI Emoji", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmPedido";
             this.Text = "Pedido";
             this.groupBox2.ResumeLayout(false);

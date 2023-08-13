@@ -47,7 +47,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.panel1.Location = new System.Drawing.Point(-1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(501, 10);
+            this.panel1.Size = new System.Drawing.Size(439, 10);
             this.panel1.TabIndex = 23;
             // 
             // txtInfo
@@ -55,13 +55,13 @@
             this.txtInfo.BackColor = System.Drawing.Color.White;
             this.txtInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtInfo.Enabled = false;
-            this.txtInfo.Font = new System.Drawing.Font("Segoe UI Emoji", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInfo.Font = new System.Drawing.Font("Segoe UI Emoji", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
-            this.txtInfo.Location = new System.Drawing.Point(162, 16);
+            this.txtInfo.Location = new System.Drawing.Point(112, 15);
             this.txtInfo.Multiline = true;
             this.txtInfo.Name = "txtInfo";
             this.txtInfo.ReadOnly = true;
-            this.txtInfo.Size = new System.Drawing.Size(269, 149);
+            this.txtInfo.Size = new System.Drawing.Size(269, 131);
             this.txtInfo.TabIndex = 25;
             this.txtInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -76,9 +76,9 @@
             this.btnRemove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemove.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemove.Location = new System.Drawing.Point(447, 126);
+            this.btnRemove.Location = new System.Drawing.Point(387, 107);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(45, 45);
+            this.btnRemove.Size = new System.Drawing.Size(40, 40);
             this.btnRemove.TabIndex = 30;
             this.toolTip1.SetToolTip(this.btnRemove, "Remover -1 del producto de la lista");
             this.btnRemove.UseVisualStyleBackColor = true;
@@ -94,9 +94,9 @@
             this.btnComment.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnComment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnComment.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComment.Location = new System.Drawing.Point(445, 73);
+            this.btnComment.Location = new System.Drawing.Point(387, 61);
             this.btnComment.Name = "btnComment";
-            this.btnComment.Size = new System.Drawing.Size(50, 50);
+            this.btnComment.Size = new System.Drawing.Size(40, 40);
             this.btnComment.TabIndex = 29;
             this.toolTip1.SetToolTip(this.btnComment, "Realizar un comentario al producto");
             this.btnComment.UseVisualStyleBackColor = true;
@@ -112,9 +112,9 @@
             this.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(443, 15);
+            this.btnAdd.Location = new System.Drawing.Point(387, 15);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(55, 55);
+            this.btnAdd.Size = new System.Drawing.Size(40, 40);
             this.btnAdd.TabIndex = 28;
             this.toolTip1.SetToolTip(this.btnAdd, "Agregar producto a la lista");
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -122,9 +122,9 @@
             // pxImagen
             // 
             this.pxImagen.Image = ((System.Drawing.Image)(resources.GetObject("pxImagen.Image")));
-            this.pxImagen.Location = new System.Drawing.Point(6, 15);
+            this.pxImagen.Location = new System.Drawing.Point(6, 28);
             this.pxImagen.Name = "pxImagen";
-            this.pxImagen.Size = new System.Drawing.Size(150, 150);
+            this.pxImagen.Size = new System.Drawing.Size(100, 100);
             this.pxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pxImagen.TabIndex = 24;
             this.pxImagen.TabStop = false;
@@ -139,8 +139,10 @@
             this.Controls.Add(this.txtInfo);
             this.Controls.Add(this.pxImagen);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Name = "ProductoPedidoSmall";
-            this.Size = new System.Drawing.Size(500, 172);
+            this.Size = new System.Drawing.Size(438, 151);
             ((System.ComponentModel.ISupportInitialize)(this.pxImagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
