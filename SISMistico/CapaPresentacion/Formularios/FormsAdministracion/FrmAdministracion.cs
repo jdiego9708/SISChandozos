@@ -2,6 +2,7 @@
 using CapaNegocio;
 using CapaPresentacion.Formularios.FormsEgresos;
 using CapaPresentacion.Formularios.FormsIngresos;
+using CapaPresentacion.Formularios.FormsNovedades;
 using CapaPresentacion.Formularios.FormsTurnos;
 using System;
 using System.Data;
@@ -19,8 +20,26 @@ namespace CapaPresentacion.Formularios.FormsAdministracion
 
             this.btnAddGasto.Click += BtnAddGasto_Click;
             this.btnAddIngreso.Click += BtnAddIngreso_Click;
+            this.btnAddNovedad.Click += BtnAddNovedad_Click;
         }
 
+        private void BtnAddNovedad_Click(object sender, EventArgs e)
+        {
+            FrmAddNovedad frmAddNovedad = new FrmAddNovedad()
+            {
+                StartPosition = FormStartPosition.CenterScreen,
+                MaximizeBox = false,
+                MinimizeBox = false,
+            };
+            frmAddNovedad.OnNovedadSuccess += FrmAddNovedad_OnNovedadSuccess;
+            frmAddNovedad.ShowDialog();
+        }
+        private void FrmAddNovedad_OnNovedadSuccess(object sender, EventArgs e)
+        {
+            if (this.FrmTurno == null) return;
+
+            this.LoadTurno();
+        }
         private void BtnAddIngreso_Click(object sender, EventArgs e)
         {
             FrmNuevoIngreso frmNuevoIngreso = new FrmNuevoIngreso()

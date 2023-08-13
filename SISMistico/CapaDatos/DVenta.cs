@@ -177,6 +177,13 @@ namespace CapaDatos
                 };
                 SqlCmd.Parameters.Add(Estado);
 
+                SqlParameter dtDetallePago = new SqlParameter
+                {
+                    ParameterName = "@dtDetallePago",
+                    Value = detalle_pago,
+                };
+                SqlCmd.Parameters.Add(dtDetallePago);
+
                 //Ejecutamos nuestro comando
                 //Se puede ejecutar este metodo pero ya tenemos el mensaje que devuelve sql
                 rpta = SqlCmd.ExecuteNonQuery() >= 1 ? "OK" : "NO se Ingreso el Registro";
@@ -185,66 +192,66 @@ namespace CapaDatos
                 {
                     venta.Id_venta = Convert.ToInt32(SqlCmd.Parameters["@Id_venta"].Value);
 
-                    if (detalle_pago != null)
-                    {                       
-                        StringBuilder query = new StringBuilder();
-                        foreach (DataRow row in detalle_pago.Rows)
-                        {
-                            SqlCmd = new SqlCommand
-                            {
-                                Connection = SqlCon,
-                                CommandText = "sp_Detalle_ventas_i",
-                                CommandType = CommandType.StoredProcedure
-                            };
+                    //if (detalle_pago != null)
+                    //{                       
+                    //    StringBuilder query = new StringBuilder();
+                    //    foreach (DataRow row in detalle_pago.Rows)
+                    //    {
+                    //        SqlCmd = new SqlCommand
+                    //        {
+                    //            Connection = SqlCon,
+                    //            CommandText = "sp_Detalle_ventas_i",
+                    //            CommandType = CommandType.StoredProcedure
+                    //        };
 
-                            string pago = Convert.ToString(row["Pago"]);
-                            decimal valor_pago = Convert.ToDecimal(row["Valor_pago"]);
-                            string vaucher = Convert.ToString(row["Vaucher"]);
-                            string observaciones = Convert.ToString(row["Observaciones"]);
+                    //        string pago = Convert.ToString(row["Pago"]);
+                    //        decimal valor_pago = Convert.ToDecimal(row["Valor_pago"]);
+                    //        string vaucher = Convert.ToString(row["Vaucher"]);
+                    //        string observaciones = Convert.ToString(row["Observaciones"]);
                        
-                            SqlParameter Id_venta1 = new SqlParameter
-                            {
-                                ParameterName = "@Id_venta",
-                                SqlDbType = SqlDbType.Int,
-                                Value = venta.Id_venta,
-                            };
-                            SqlCmd.Parameters.Add(Id_venta1);
+                    //        SqlParameter Id_venta1 = new SqlParameter
+                    //        {
+                    //            ParameterName = "@Id_venta",
+                    //            SqlDbType = SqlDbType.Int,
+                    //            Value = venta.Id_venta,
+                    //        };
+                    //        SqlCmd.Parameters.Add(Id_venta1);
 
-                            SqlParameter Metodo_pago = new SqlParameter
-                            {
-                                ParameterName = "@Metodo_pago",
-                                SqlDbType = SqlDbType.VarChar,
-                                Value = pago,
-                            };
-                            SqlCmd.Parameters.Add(Metodo_pago);
+                    //        SqlParameter Metodo_pago = new SqlParameter
+                    //        {
+                    //            ParameterName = "@Metodo_pago",
+                    //            SqlDbType = SqlDbType.VarChar,
+                    //            Value = pago,
+                    //        };
+                    //        SqlCmd.Parameters.Add(Metodo_pago);
 
-                            SqlParameter Valor_pago = new SqlParameter
-                            {
-                                ParameterName = "@Valor_pago",
-                                SqlDbType = SqlDbType.Decimal,
-                                Value = valor_pago,
-                            };
-                            SqlCmd.Parameters.Add(Valor_pago);
+                    //        SqlParameter Valor_pago = new SqlParameter
+                    //        {
+                    //            ParameterName = "@Valor_pago",
+                    //            SqlDbType = SqlDbType.Decimal,
+                    //            Value = valor_pago,
+                    //        };
+                    //        SqlCmd.Parameters.Add(Valor_pago);
 
-                            SqlParameter Vaucher = new SqlParameter
-                            {
-                                ParameterName = "@Vaucher",
-                                SqlDbType = SqlDbType.VarChar,
-                                Value = vaucher,
-                            };
-                            SqlCmd.Parameters.Add(Vaucher);
+                    //        SqlParameter Vaucher = new SqlParameter
+                    //        {
+                    //            ParameterName = "@Vaucher",
+                    //            SqlDbType = SqlDbType.VarChar,
+                    //            Value = vaucher,
+                    //        };
+                    //        SqlCmd.Parameters.Add(Vaucher);
 
-                            SqlParameter Observaciones1 = new SqlParameter
-                            {
-                                ParameterName = "@Observaciones",
-                                SqlDbType = SqlDbType.VarChar,
-                                Value = observaciones,
-                            };
-                            SqlCmd.Parameters.Add(Observaciones1);
+                    //        SqlParameter Observaciones1 = new SqlParameter
+                    //        {
+                    //            ParameterName = "@Observaciones",
+                    //            SqlDbType = SqlDbType.VarChar,
+                    //            Value = observaciones,
+                    //        };
+                    //        SqlCmd.Parameters.Add(Observaciones1);
 
-                            rpta = SqlCmd.ExecuteNonQuery() >= 1 ? "OK" : "ERROR";
-                        }                       
-                    }
+                    //        rpta = SqlCmd.ExecuteNonQuery() >= 1 ? "OK" : "ERROR";
+                    //    }                       
+                    //}
                 }
                 else
                 {

@@ -36,7 +36,7 @@ namespace CapaPresentacion.Formularios.FormsTurnos
             {
                 WindowState = FormWindowState.Maximized
             };
-            frmReporteStockDiario.ProcessReport();
+            frmReporteStockDiario.ProcessReport(this.Turno.Id_turno);
             frmReporteStockDiario.Show();
         }
 

@@ -61,6 +61,7 @@
     <Compile Include="Models\Mesas.cs" />
     <Compile Include="Models\Clientes.cs" />
     <Compile Include="Models\Bebidas.cs" />
+    <Compile Include="Models\Novedades.cs" />
     <Compile Include="Models\Platos.cs" />
     <Compile Include="Models\Pedidos.cs" />
     <Compile Include="Models\Empleados.cs" />

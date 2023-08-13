@@ -50,8 +50,8 @@ namespace CapaPresentacion.Formularios.FormsPedido
         public DataTable TablaPago(bool isPrecuenta)
         {
             DataTable table = new DataTable();
-            table.Columns.Add("Pago", typeof(string));
-            table.Columns.Add("Valor_pago", typeof(string));
+            table.Columns.Add("Metodo_pago", typeof(string));
+            table.Columns.Add("Valor_pago", typeof(int));
             table.Columns.Add("Vaucher", typeof(string));
             table.Columns.Add("Observaciones", typeof(string));
 
@@ -65,8 +65,8 @@ namespace CapaPresentacion.Formularios.FormsPedido
                 foreach (MetodoPagoModel metodo in MetodosPago)
                 {
                     DataRow row = table.NewRow();
-                    row["Pago"] = metodo.MetodoPago;
-                    row["Valor_pago"] = metodo.ValorPago;
+                    row["Metodo_pago"] = metodo.MetodoPago;
+                    row["Valor_pago"] = Convert.ToInt32(metodo.ValorPago);
                     row["Vaucher"] = metodo.Vaucher;
                     row["Observaciones"] = metodo.Observaciones;
                     table.Rows.Add(row);

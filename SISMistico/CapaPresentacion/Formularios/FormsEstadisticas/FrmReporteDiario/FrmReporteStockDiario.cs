@@ -31,10 +31,8 @@ namespace CapaPresentacion.Formularios.FormsEstadisticas
 
         private ReportViewer reportViewer1;
 
-        public async void ProcessReport()
+        public async void ProcessReport(int id_turno)
         {
-            DatosInicioSesion datos = DatosInicioSesion.GetInstancia();
-
             this.BuscarProductos("ALL PRODUCTS", "");
 
             DataTable dtStockProducts = new DataTable();
@@ -43,16 +41,16 @@ namespace CapaPresentacion.Formularios.FormsEstadisticas
             dtStockProducts.Columns.Add("Stock_final_producto", typeof(string));
             dtStockProducts.Columns.Add("Diferencia_producto", typeof(string));
             dtStockProducts.Columns.Add("Nombre_producto", typeof(string));
-                
-            List<TipoResumen> listResumen = await this.LoadVentasDetalles(datos.Turno.Id_turno);
 
-            foreach(TipoResumen item in listResumen)
+            List<TipoResumen> listResumen = await this.LoadVentasDetalles(id_turno);
+
+            foreach (TipoResumen item in listResumen)
             {
                 var productSelected = this.Products.Where(x => item.Id_tipo == x.Id_producto).FirstOrDefault();
 
                 if (productSelected == null) continue;
 
-                foreach(Detail_products detail in productSelected.Detail_products)
+                foreach (Detail_products detail in productSelected.Detail_products)
                 {
                     DataRow newRow = dtStockProducts.NewRow();
 
@@ -74,7 +72,36 @@ namespace CapaPresentacion.Formularios.FormsEstadisticas
                 }
             }
 
-            this.ObtenerReporte(dtStockProducts);
+            var resultNovedades = await NNovedades.BuscarNovedades("ID TURNO", id_turno.ToString());
+
+            DataTable dtNovedades = resultNovedades.dt;
+
+            DataTable dtNovedadesAdd = new DataTable();
+            dtNovedadesAdd.Columns.Add("Id_novedad", typeof(string));
+            dtNovedadesAdd.Columns.Add("Nombre_producto", typeof(string));
+            dtNovedadesAdd.Columns.Add("Cantidad_novedad", typeof(string));
+            dtNovedadesAdd.Columns.Add("Hora_novedad", typeof(string));
+            dtNovedadesAdd.Columns.Add("Observaciones_novedad", typeof(string));
+
+            if (dtNovedades != null)
+            {
+                foreach (DataRow row in dtNovedades.Rows)
+                {
+                    DataRow newRowNovedad = dtNovedadesAdd.NewRow();
+
+                    Novedades nov = new Novedades(row);
+
+                    newRowNovedad["Id_novedad"] = nov.Id_novedad;
+                    newRowNovedad["Nombre_producto"] = nov.Producto.Nombre_producto;
+                    newRowNovedad["Cantidad_novedad"] = nov.Cantidad_novedad;
+                    newRowNovedad["Hora_novedad"] = nov.Hora_novedad;
+                    newRowNovedad["Observaciones_novedad"] = nov.Descripcion_novedad;
+
+                    dtNovedadesAdd.Rows.Add(newRowNovedad);
+                }
+            }
+
+            this.ObtenerReporte(dtStockProducts, dtNovedadesAdd);
         }
         private void BuscarProductos(string tipo_busqueda, string texto_busqueda)
         {
@@ -191,7 +218,7 @@ namespace CapaPresentacion.Formularios.FormsEstadisticas
         {
             MensajeEspera.ShowWait("Cargando...");
 
-      
+
 
             DataTable dtEstadistica;
             DataTable dtDetalle;
@@ -236,7 +263,7 @@ namespace CapaPresentacion.Formularios.FormsEstadisticas
 
             //MensajeEspera.CloseForm();
         }
-        public void ObtenerReporte(DataTable dtDetails)
+        public void ObtenerReporte(DataTable dtDetails, DataTable dtNovedades)
         {
             if (this.gbReporte.Controls.Count > 0)
                 this.gbReporte.Controls.Clear();
@@ -249,9 +276,9 @@ namespace CapaPresentacion.Formularios.FormsEstadisticas
             };
 
             PageSettings pageSettings = new PageSettings();
-            pageSettings.Margins.Left = 10;   
-            pageSettings.Margins.Right = 10;  
-            pageSettings.Margins.Top = 10; 
+            pageSettings.Margins.Left = 10;
+            pageSettings.Margins.Right = 10;
+            pageSettings.Margins.Top = 10;
             pageSettings.Margins.Bottom = 10;
 
             this.reportViewer1.SetPageSettings(pageSettings);
@@ -266,9 +293,14 @@ namespace CapaPresentacion.Formularios.FormsEstadisticas
             ReportDataSource dsDetails = new ReportDataSource("dsStock", dtDetails);
             reportViewer1.LocalReport.DataSources.Add(dsDetails);
 
+            ReportDataSource dsNovedades = new ReportDataSource("dsNovedades", dtNovedades);
+            reportViewer1.LocalReport.DataSources.Add(dsNovedades);
+
             this.gbReporte.Controls.Add(this.reportViewer1);
 
             this.reportViewer1.RefreshReport();
+
+            MensajeEspera.CloseForm();
 
             //Warning[] warnings;
             //string[] streamids;

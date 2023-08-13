@@ -32,13 +32,12 @@
             this.gbTurno = new System.Windows.Forms.GroupBox();
             this.panelTurno = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnReportes = new System.Windows.Forms.Button();
-            this.btnHistorialVentas = new System.Windows.Forms.Button();
             this.btnAddIngreso = new System.Windows.Forms.Button();
             this.btnAddGasto = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.graphicsVentas2 = new CapaPresentacion.Formularios.FormsEstadisticas.FormEstadisticasIniciales.GraphicsVentas();
             this.graphicsVentas1 = new CapaPresentacion.Formularios.FormsEstadisticas.FormEstadisticasIniciales.GraphicsVentas();
+            this.btnAddNovedad = new System.Windows.Forms.Button();
             this.gbTurno.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -50,9 +49,9 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.gbTurno.Controls.Add(this.panelTurno);
             this.gbTurno.Location = new System.Drawing.Point(9, -4);
-            this.gbTurno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbTurno.Margin = new System.Windows.Forms.Padding(2);
             this.gbTurno.Name = "gbTurno";
-            this.gbTurno.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbTurno.Padding = new System.Windows.Forms.Padding(2);
             this.gbTurno.Size = new System.Drawing.Size(571, 596);
             this.gbTurno.TabIndex = 0;
             this.gbTurno.TabStop = false;
@@ -63,7 +62,7 @@
             this.panelTurno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panelTurno.Location = new System.Drawing.Point(4, 26);
-            this.panelTurno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelTurno.Margin = new System.Windows.Forms.Padding(2);
             this.panelTurno.Name = "panelTurno";
             this.panelTurno.Size = new System.Drawing.Size(562, 566);
             this.panelTurno.TabIndex = 0;
@@ -72,56 +71,17 @@
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.btnReportes);
-            this.groupBox2.Controls.Add(this.btnHistorialVentas);
+            this.groupBox2.Controls.Add(this.btnAddNovedad);
             this.groupBox2.Controls.Add(this.btnAddIngreso);
             this.groupBox2.Controls.Add(this.btnAddGasto);
             this.groupBox2.Location = new System.Drawing.Point(981, -4);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(218, 596);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Accesos directos";
-            // 
-            // btnReportes
-            // 
-            this.btnReportes.BackColor = System.Drawing.Color.White;
-            this.btnReportes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReportes.FlatAppearance.BorderSize = 0;
-            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportes.Font = new System.Drawing.Font("Segoe UI Emoji", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnReportes.Image = ((System.Drawing.Image)(resources.GetObject("btnReportes.Image")));
-            this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportes.Location = new System.Drawing.Point(3, 218);
-            this.btnReportes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(205, 56);
-            this.btnReportes.TabIndex = 16;
-            this.btnReportes.Text = "Reportes";
-            this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnReportes.UseVisualStyleBackColor = false;
-            // 
-            // btnHistorialVentas
-            // 
-            this.btnHistorialVentas.BackColor = System.Drawing.Color.White;
-            this.btnHistorialVentas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHistorialVentas.FlatAppearance.BorderSize = 0;
-            this.btnHistorialVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistorialVentas.Font = new System.Drawing.Font("Segoe UI Emoji", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistorialVentas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnHistorialVentas.Image = ((System.Drawing.Image)(resources.GetObject("btnHistorialVentas.Image")));
-            this.btnHistorialVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHistorialVentas.Location = new System.Drawing.Point(3, 153);
-            this.btnHistorialVentas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnHistorialVentas.Name = "btnHistorialVentas";
-            this.btnHistorialVentas.Size = new System.Drawing.Size(205, 56);
-            this.btnHistorialVentas.TabIndex = 15;
-            this.btnHistorialVentas.Text = "Historial de \r\nventas";
-            this.btnHistorialVentas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnHistorialVentas.UseVisualStyleBackColor = false;
             // 
             // btnAddIngreso
             // 
@@ -134,7 +94,7 @@
             this.btnAddIngreso.Image = ((System.Drawing.Image)(resources.GetObject("btnAddIngreso.Image")));
             this.btnAddIngreso.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddIngreso.Location = new System.Drawing.Point(3, 28);
-            this.btnAddIngreso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddIngreso.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddIngreso.Name = "btnAddIngreso";
             this.btnAddIngreso.Size = new System.Drawing.Size(205, 56);
             this.btnAddIngreso.TabIndex = 14;
@@ -153,7 +113,7 @@
             this.btnAddGasto.Image = ((System.Drawing.Image)(resources.GetObject("btnAddGasto.Image")));
             this.btnAddGasto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddGasto.Location = new System.Drawing.Point(3, 88);
-            this.btnAddGasto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddGasto.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddGasto.Name = "btnAddGasto";
             this.btnAddGasto.Size = new System.Drawing.Size(205, 56);
             this.btnAddGasto.TabIndex = 13;
@@ -168,9 +128,9 @@
             this.groupBox3.Controls.Add(this.graphicsVentas2);
             this.groupBox3.Controls.Add(this.graphicsVentas1);
             this.groupBox3.Location = new System.Drawing.Point(584, -4);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(384, 596);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
@@ -196,6 +156,25 @@
             this.graphicsVentas1.Size = new System.Drawing.Size(359, 255);
             this.graphicsVentas1.TabIndex = 0;
             // 
+            // btnAddNovedad
+            // 
+            this.btnAddNovedad.BackColor = System.Drawing.Color.White;
+            this.btnAddNovedad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddNovedad.FlatAppearance.BorderSize = 0;
+            this.btnAddNovedad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddNovedad.Font = new System.Drawing.Font("Segoe UI Emoji", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddNovedad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAddNovedad.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNovedad.Image")));
+            this.btnAddNovedad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddNovedad.Location = new System.Drawing.Point(3, 152);
+            this.btnAddNovedad.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddNovedad.Name = "btnAddNovedad";
+            this.btnAddNovedad.Size = new System.Drawing.Size(205, 56);
+            this.btnAddNovedad.TabIndex = 16;
+            this.btnAddNovedad.Text = "Registrar novedad";
+            this.btnAddNovedad.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddNovedad.UseVisualStyleBackColor = false;
+            // 
             // FrmAdministracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -208,7 +187,7 @@
             this.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmAdministracion";
             this.Text = "Administracion Chandozos";
             this.gbTurno.ResumeLayout(false);
@@ -226,9 +205,8 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnAddGasto;
         private System.Windows.Forms.Button btnAddIngreso;
-        private System.Windows.Forms.Button btnReportes;
-        private System.Windows.Forms.Button btnHistorialVentas;
         private FormsEstadisticas.FormEstadisticasIniciales.GraphicsVentas graphicsVentas2;
         private FormsEstadisticas.FormEstadisticasIniciales.GraphicsVentas graphicsVentas1;
+        private System.Windows.Forms.Button btnAddNovedad;
     }
 }

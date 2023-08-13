@@ -407,15 +407,22 @@ namespace CapaPresentacion.Formularios.FormsProductos
         {
             Productos producto = (Productos)sender;
 
-            FrmProfileProduct frmProfileProduct = new FrmProfileProduct()
+            if (this.OnBtnProductSelected == null)
             {
-                StartPosition = FormStartPosition.CenterScreen,
-                MinimizeBox = false,
-                MaximizeBox = false,
-                Products = this.Products
-            };
-            frmProfileProduct.Producto = producto;
-            frmProfileProduct.ShowDialog();
+                FrmProfileProduct frmProfileProduct = new FrmProfileProduct()
+                {
+                    StartPosition = FormStartPosition.CenterScreen,
+                    MinimizeBox = false,
+                    MaximizeBox = false,
+                    Products = this.Products
+                };
+                frmProfileProduct.Producto = producto;
+                frmProfileProduct.ShowDialog();
+                return;
+            }
+
+            this.OnBtnProductSelected?.Invoke(producto, e);
+            this.Close();
         }
         private void LoadCategorias(string tipo_busqueda, string texto_busqueda)
         {
@@ -493,5 +500,7 @@ namespace CapaPresentacion.Formularios.FormsProductos
         public List<Productos> Products { get; set; }
         public List<Productos> ProductsDetails { get; set; }
         public List<Productos> ProductsInventory { get; set; }
+
+        public event EventHandler OnBtnProductSelected;
     }
 }

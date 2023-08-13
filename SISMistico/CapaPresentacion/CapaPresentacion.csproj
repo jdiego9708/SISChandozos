@@ -431,6 +431,12 @@
     <Compile Include="Formularios\FormsPedido\FrmDeletePedido.Designer.cs">
       <DependentUpon>FrmDeletePedido.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FormsPedido\FrmDevueltas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormsPedido\FrmDevueltas.Designer.cs">
+      <DependentUpon>FrmDevueltas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FormsPedido\FrmDomicilios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -693,6 +699,12 @@
     </Compile>
     <Compile Include="Formularios\FormsVentas\VentaSmall.Designer.cs">
       <DependentUpon>VentaSmall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormsNovedades\FrmAddNovedad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormsNovedades\FrmAddNovedad.Designer.cs">
+      <DependentUpon>FrmAddNovedad.cs</DependentUpon>
     </Compile>
     <Compile Include="ReportesFacturas\Comandas\ConfigComandas.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1023,6 +1035,9 @@
     <EmbeddedResource Include="Formularios\FormsPedido\FrmDeletePedido.resx">
       <DependentUpon>FrmDeletePedido.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormsPedido\FrmDevueltas.resx">
+      <DependentUpon>FrmDevueltas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormsPedido\FrmDomicilios.resx">
       <DependentUpon>FrmDomicilios.cs</DependentUpon>
     </EmbeddedResource>
@@ -1179,6 +1194,9 @@
     <EmbeddedResource Include="Formularios\FrmComprobacion.resx">
       <DependentUpon>FrmComprobacion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormsNovedades\FrmAddNovedad.resx">
+      <DependentUpon>FrmAddNovedad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -1315,6 +1333,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\No_hay_stock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

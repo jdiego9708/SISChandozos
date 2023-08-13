@@ -115,7 +115,7 @@
                         this.ClienteSelected = new Clientes
                         {
                             Id_cliente = 0,
-                            Nombre_cliente = "CLIENTE CHILL",
+                            Nombre_cliente = "CLIENTE CHANDOZO",
                             Correo_electronico = "solucionesinformaticas9708@gmail.com",
                         };
                 }
