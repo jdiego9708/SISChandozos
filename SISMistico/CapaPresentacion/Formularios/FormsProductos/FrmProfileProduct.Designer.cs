@@ -42,11 +42,11 @@
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.btnAddStock = new System.Windows.Forms.Button();
             this.gbUltimosIngresos = new System.Windows.Forms.GroupBox();
-            this.gbDetails = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panelDetails = new CapaPresentacion.Controles.CustomGridPanel();
-            this.panelHistorialStock = new CapaPresentacion.Controles.CustomGridPanel();
             this.txtStockActual = new System.Windows.Forms.TextBox();
+            this.panelHistorialStock = new CapaPresentacion.Controles.CustomGridPanel();
+            this.gbDetails = new System.Windows.Forms.GroupBox();
+            this.panelDetails = new CapaPresentacion.Controles.CustomGridPanel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.gbNombre.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pxImage)).BeginInit();
@@ -247,62 +247,6 @@
             this.gbUltimosIngresos.TabStop = false;
             this.gbUltimosIngresos.Text = "Últimos ingresos en el stock";
             // 
-            // gbDetails
-            // 
-            this.gbDetails.Controls.Add(this.panelDetails);
-            this.gbDetails.Controls.Add(this.textBox1);
-            this.gbDetails.Font = new System.Drawing.Font("Segoe UI Emoji", 14F);
-            this.gbDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gbDetails.Location = new System.Drawing.Point(634, 14);
-            this.gbDetails.Margin = new System.Windows.Forms.Padding(5);
-            this.gbDetails.Name = "gbDetails";
-            this.gbDetails.Padding = new System.Windows.Forms.Padding(5);
-            this.gbDetails.Size = new System.Drawing.Size(371, 538);
-            this.gbDetails.TabIndex = 41;
-            this.gbDetails.TabStop = false;
-            this.gbDetails.Text = "Detalles del producto";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI Emoji", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
-            this.textBox1.Location = new System.Drawing.Point(10, 40);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(350, 28);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // panelDetails
-            // 
-            this.panelDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelDetails.AutoScroll = true;
-            this.panelDetails.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelDetails.Location = new System.Drawing.Point(10, 33);
-            this.panelDetails.Name = "panelDetails";
-            this.panelDetails.PageSize = 10;
-            this.panelDetails.Size = new System.Drawing.Size(351, 493);
-            this.panelDetails.TabIndex = 1;
-            // 
-            // panelHistorialStock
-            // 
-            this.panelHistorialStock.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelHistorialStock.AutoScroll = true;
-            this.panelHistorialStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelHistorialStock.Location = new System.Drawing.Point(10, 82);
-            this.panelHistorialStock.Name = "panelHistorialStock";
-            this.panelHistorialStock.PageSize = 10;
-            this.panelHistorialStock.Size = new System.Drawing.Size(351, 444);
-            this.panelHistorialStock.TabIndex = 1;
-            // 
             // txtStockActual
             // 
             this.txtStockActual.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -318,6 +262,62 @@
             this.txtStockActual.Size = new System.Drawing.Size(284, 28);
             this.txtStockActual.TabIndex = 2;
             this.txtStockActual.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panelHistorialStock
+            // 
+            this.panelHistorialStock.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelHistorialStock.AutoScroll = true;
+            this.panelHistorialStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelHistorialStock.Location = new System.Drawing.Point(10, 82);
+            this.panelHistorialStock.Name = "panelHistorialStock";
+            this.panelHistorialStock.PageSize = 10;
+            this.panelHistorialStock.Size = new System.Drawing.Size(351, 444);
+            this.panelHistorialStock.TabIndex = 1;
+            // 
+            // gbDetails
+            // 
+            this.gbDetails.Controls.Add(this.panelDetails);
+            this.gbDetails.Controls.Add(this.textBox1);
+            this.gbDetails.Font = new System.Drawing.Font("Segoe UI Emoji", 14F);
+            this.gbDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gbDetails.Location = new System.Drawing.Point(634, 14);
+            this.gbDetails.Margin = new System.Windows.Forms.Padding(5);
+            this.gbDetails.Name = "gbDetails";
+            this.gbDetails.Padding = new System.Windows.Forms.Padding(5);
+            this.gbDetails.Size = new System.Drawing.Size(371, 538);
+            this.gbDetails.TabIndex = 41;
+            this.gbDetails.TabStop = false;
+            this.gbDetails.Text = "Detalles del producto";
+            // 
+            // panelDetails
+            // 
+            this.panelDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelDetails.AutoScroll = true;
+            this.panelDetails.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelDetails.Location = new System.Drawing.Point(10, 33);
+            this.panelDetails.Name = "panelDetails";
+            this.panelDetails.PageSize = 10;
+            this.panelDetails.Size = new System.Drawing.Size(351, 493);
+            this.panelDetails.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI Emoji", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
+            this.textBox1.Location = new System.Drawing.Point(10, 40);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(5);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(350, 28);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FrmProfileProduct
             // 

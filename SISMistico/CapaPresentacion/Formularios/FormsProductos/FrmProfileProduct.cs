@@ -106,33 +106,45 @@ namespace CapaPresentacion.Formularios.FormsProductos
             {
                 if (producto.Detail_products.Count > 0)
                 {
-                    this.gbDetails.Visible = true;
-                    this.gbUltimosIngresos.Visible = false;
+                    var productDefaultMain = producto.Detail_products[0];
 
-                    this.panelDetails.clearDataSource();
-
-                    List<UserControl> usersControls = new List<UserControl>();
-
-                    foreach(var de in producto.Detail_products)
+                    if (productDefaultMain != null)
                     {
-                        var productDefault = this.Products.Where(x => x.Id_producto == de.Id_product_reference).FirstOrDefault();
+                        this.panelDetails.clearDataSource();
 
-                        if (productDefault == null)
-                            de.Product = producto;
-                        else
-                            de.Product = productDefault;
+                        List<UserControl> usersControls = new List<UserControl>();
 
-                        ProductInventoryAddSmall prSmall = new ProductInventoryAddSmall()
+                        foreach (var de in producto.Detail_products)
                         {
-                            DetailProduct = de,
-                        };
+                            var productDefault = this.Products.Where(x => x.Id_producto == de.Id_product_reference).FirstOrDefault();
 
-                        prSmall.btnDelete.Visible = false;
+                            if (productDefault == null)
+                                de.Product = producto;
+                            else
+                                de.Product = productDefault;
 
-                        usersControls.Add(prSmall);
-                    }
+                            ProductInventoryAddSmall prSmall = new ProductInventoryAddSmall()
+                            {
+                                DetailProduct = de,
+                            };
 
-                    this.panelDetails.AddArrayControl(usersControls);
+                            prSmall.btnDelete.Visible = false;
+
+                            usersControls.Add(prSmall);
+                        }
+
+                        if (productDefaultMain.Product.Id_producto == producto.Id_producto)
+                        {
+                            return;
+                        }
+                        else
+                        {
+                            this.gbDetails.Visible = true;
+                            this.gbUltimosIngresos.Visible = false;
+                        }
+
+                        this.panelDetails.AddArrayControl(usersControls);
+                    }              
                 }
             }
         }
