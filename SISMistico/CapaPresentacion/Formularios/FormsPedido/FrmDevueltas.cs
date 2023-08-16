@@ -60,6 +60,7 @@ namespace CapaPresentacion.Formularios.FormsPedido
         private void BtnSave_Click(object sender, EventArgs e)
         {
             this.OnBtnSaveClick?.Invoke(this, e);
+            this.Close();
         }
         public void AsignarDatos(decimal total_pagar)
         {

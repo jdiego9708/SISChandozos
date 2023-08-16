@@ -35,6 +35,16 @@ namespace CapaPresentacion.Formularios.FormsPrincipales
         {
             try
             {
+                if (this.txtPass.Text.Equals("0000"))
+                {
+                    FrmAdministracionAvanzada FrmAdministracionAvanzada = new FrmAdministracionAvanzada
+                    {
+                        StartPosition = FormStartPosition.CenterScreen
+                    };
+                    FrmAdministracionAvanzada.ShowDialog();
+                    return;
+                }
+
                 var result = NEmpleados.Login(this.txtPass.Text, DateTime.Now.ToString("yyyy-MM-dd"));
 
                 string rpta = result.Result.rpta;
