@@ -36,7 +36,7 @@ namespace CapaPresentacion.Formularios.FormsVentas
                 DateTime horaVenta = fechaVenta.Add(venta.Hora_venta);
                 StringBuilder sb = new StringBuilder();
                 if (venta.Estado.Equals("CANCELADO"))
-                {                  
+                {
                     if (venta.Pedido.Fecha_pedido.ToString("yyyy-MM-dd") == DateTime.Now.ToString("yyyy-MM-dd"))
                         sb.Append($"HOY | Hora: {horaVenta:hh:mm tt} | {venta.Pedido.Cliente.Nombre_cliente} | CANCELADO | ");
                     else if (venta.Pedido.Fecha_pedido.ToString("yyyy-MM-dd") == DateTime.Now.AddDays(-1).ToString("yyyy-MM-dd"))
@@ -65,22 +65,21 @@ namespace CapaPresentacion.Formularios.FormsVentas
                 if (detalles == null) return;
 
                 if (fechaVenta.ToString("yyyy-MM-dd") == DateTime.Now.ToString("yyyy-MM-dd"))
-                    sb.Append($"HOY | Hora: {horaVenta:hh:mm tt} | {venta.Pedido.Cliente.Nombre_cliente} | Total: ${venta.Total_final:N} | ");
+                    sb.Append($"HOY | Hora: {horaVenta:hh:mm tt} | Total: ${venta.Total_final:N} | ");
                 else if (fechaVenta.ToString("yyyy-MM-dd") == DateTime.Now.AddDays(-1).ToString("yyyy-MM-dd"))
-                    sb.Append($"AYER | Hora: {horaVenta:hh:mm tt} | {venta.Pedido.Cliente.Nombre_cliente} | Total: ${venta.Total_final:N} | ");
+                    sb.Append($"AYER | Hora: {horaVenta:hh:mm tt} | Total: ${venta.Total_final:N} | ");
                 else if (fechaVenta.ToString("yyyy-MM-dd") == DateTime.Now.AddDays(-2).ToString("yyyy-MM-dd"))
-                    sb.Append($"HACE DOS DIAS | Hora: {horaVenta:hh:mm tt} | {venta.Pedido.Cliente.Nombre_cliente} | Total: ${venta.Total_final:N} | ");
+                    sb.Append($"HACE DOS DIAS | Hora: {horaVenta:hh:mm tt} | Total: ${venta.Total_final:N} | ");
                 else
-                    sb.Append($"{fechaVenta:yyyy-MM-dd} | Hora: {horaVenta:hh:mm tt} | {venta.Pedido.Cliente.Nombre_cliente} | Total: ${venta.Total_final:N} | ");
+                    sb.Append($"{fechaVenta:yyyy-MM-dd} | Hora: {horaVenta:hh:m tt} | Total: ${venta.Total_final:N} | ");
 
-                if (detalles.Count == 1)
+                sb.Append(Environment.NewLine);
+
+                foreach (Detalle_pedido de in detalles)
                 {
-                    sb.Append($"{detalles[0].Producto.Nombre_producto.ToUpper()}");
+                    sb.Append($"{de.Producto.Nombre_producto.ToUpper()} - x{de.Cantidad}" + Environment.NewLine);
                 }
-                else
-                {
-                    sb.Append($"{detalles.Count} productos");
-                }
+
                 this.txtInfo.Text = sb.ToString();
             }
             catch (Exception ex)

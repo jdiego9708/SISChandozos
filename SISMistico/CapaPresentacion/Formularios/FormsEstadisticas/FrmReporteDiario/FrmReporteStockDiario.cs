@@ -15,6 +15,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace CapaPresentacion.Formularios.FormsEstadisticas
 {
@@ -35,43 +36,6 @@ namespace CapaPresentacion.Formularios.FormsEstadisticas
         {
             this.BuscarProductos("ALL PRODUCTS", "");
 
-            DataTable dtStockProducts = new DataTable();
-            dtStockProducts.Columns.Add("Id_producto", typeof(string));
-            dtStockProducts.Columns.Add("Stock_inicial_producto", typeof(string));
-            dtStockProducts.Columns.Add("Stock_final_producto", typeof(string));
-            dtStockProducts.Columns.Add("Diferencia_producto", typeof(string));
-            dtStockProducts.Columns.Add("Nombre_producto", typeof(string));
-
-            List<TipoResumen> listResumen = await this.LoadVentasDetalles(id_turno);
-
-            foreach (TipoResumen item in listResumen)
-            {
-                var productSelected = this.Products.Where(x => item.Id_tipo == x.Id_producto).FirstOrDefault();
-
-                if (productSelected == null) continue;
-
-                foreach (Detail_products detail in productSelected.Detail_products)
-                {
-                    DataRow newRow = dtStockProducts.NewRow();
-
-                    var productFind = this.Products.Where(x => detail.Id_product_reference == x.Id_producto).First();
-
-                    if (productFind == null) continue;
-
-                    decimal stock_inicial = productFind.Last_stock.Amount_stock + (detail.Amount_product * item.Cantidad);
-                    decimal stock_final = productFind.Last_stock.Amount_stock;
-                    decimal diferencia = stock_inicial - stock_final;
-
-                    newRow["Id_producto"] = productFind.Id_producto;
-                    newRow["Stock_inicial_producto"] = stock_inicial.ToString("N2").Replace(",00", "") + " " + productFind.Last_stock.Type_medition.ToLower();
-                    newRow["Stock_final_producto"] = stock_final.ToString("N2").Replace(",00", "") + " " + productFind.Last_stock.Type_medition.ToLower();
-                    newRow["Diferencia_producto"] = diferencia.ToString("N2").Replace(",00", "") + " " + productFind.Last_stock.Type_medition.ToLower();
-                    newRow["Nombre_producto"] = productFind.Nombre_producto;
-
-                    dtStockProducts.Rows.Add(newRow);
-                }
-            }
-
             var resultNovedades = await NNovedades.BuscarNovedades("ID TURNO", id_turno.ToString());
 
             DataTable dtNovedades = resultNovedades.dt;
@@ -82,6 +46,8 @@ namespace CapaPresentacion.Formularios.FormsEstadisticas
             dtNovedadesAdd.Columns.Add("Cantidad_novedad", typeof(string));
             dtNovedadesAdd.Columns.Add("Hora_novedad", typeof(string));
             dtNovedadesAdd.Columns.Add("Observaciones_novedad", typeof(string));
+
+            List<Novedades> novedades = new List<Novedades>();
 
             if (dtNovedades != null)
             {
@@ -98,7 +64,122 @@ namespace CapaPresentacion.Formularios.FormsEstadisticas
                     newRowNovedad["Observaciones_novedad"] = nov.Descripcion_novedad;
 
                     dtNovedadesAdd.Rows.Add(newRowNovedad);
+                    novedades.Add(nov);
                 }
+            }
+
+            List<int> idsProcess = new List<int>();
+
+            List<ProductoResumenStock> productoResumen = new List<ProductoResumenStock>();
+
+            List<TipoResumen> listResumen = await this.LoadVentasDetalles(id_turno);
+
+            foreach (Productos productSelected in this.ProductsDetails)
+            {
+                if (idsProcess.Contains(productSelected.Id_producto))
+                    continue;
+
+                idsProcess.Add(productSelected.Id_producto);
+
+                foreach (Detail_products detail in productSelected.Detail_products)
+                {
+                    var prExists = productoResumen.Where(x => x.Id_producto == detail.Id_product_reference).FirstOrDefault();
+
+                    if (prExists != null)
+                        continue;
+
+                    var productSelectedFind = this.Products.Where(x => x.Id_producto == detail.Id_product_reference).FirstOrDefault();
+
+                    if (productSelectedFind == null) continue;
+
+                    idsProcess.Add(detail.Id_product_reference);
+
+                    decimal stock_inicial = 0;
+
+                    var listResumenFind = listResumen.Where(x => x.Id_tipo == productSelected.Id_producto).ToList();
+
+                    if (listResumenFind == null || listResumenFind.Count < 1)
+                        stock_inicial = productSelectedFind.Last_stock.Total_stock;
+                    else
+                    {
+                        foreach (TipoResumen tipo in listResumenFind)
+                        {
+                            var findPr = this.Products.Where(x => x.Id_producto == tipo.Id_tipo).FirstOrDefault();
+                            if (findPr == null) continue;
+
+                            stock_inicial += (productSelectedFind.Last_stock.Total_stock + (tipo.Cantidad * detail.Amount_product));
+                        }
+                    }
+
+                    var listNovedadesFind = novedades.Where(x => x.Id_producto == productSelectedFind.Id_producto);
+
+                    foreach(Novedades nove in listNovedadesFind)
+                    {
+                        stock_inicial += nove.Cantidad_novedad;
+                    }
+
+                    decimal stock_final = productSelectedFind.Last_stock.Total_stock;
+                    decimal diferencia = stock_inicial - stock_final;
+
+                    productoResumen.Add(new ProductoResumenStock()
+                    {
+                        Id_producto = productSelectedFind.Id_producto,
+                        Nombre_producto = productSelectedFind.Nombre_producto,
+                        Stock_inicial_producto = stock_inicial,
+                        Stock_final_producto = stock_final,
+                        Diferencia_producto = diferencia,
+                        Medicion = productSelectedFind.Last_stock.Type_medition
+                    });
+
+                   
+                }              
+            }
+
+            foreach (Productos productSelected in this.ProductsInventory)
+            {
+                if (idsProcess.Contains(productSelected.Id_producto))
+                    continue;
+
+                idsProcess.Add(productSelected.Id_producto);
+
+                decimal stock_inicial = productSelected.Last_stock.Total_stock;
+                decimal stock_final = productSelected.Last_stock.Total_stock;
+                decimal diferencia = stock_inicial - stock_final;
+
+                var listNovedadesFind = novedades.Where(x => x.Id_producto == productSelected.Id_producto);
+
+                foreach (Novedades nove in listNovedadesFind)
+                {
+                    stock_inicial += nove.Cantidad_novedad;
+                }
+
+                productoResumen.Add(new ProductoResumenStock()
+                {
+                    Id_producto = productSelected.Id_producto,
+                    Nombre_producto = productSelected.Nombre_producto,
+                    Stock_inicial_producto = stock_inicial,
+                    Stock_final_producto = stock_final,
+                    Diferencia_producto = diferencia,
+                    Medicion = productSelected.Last_stock.Type_medition
+                });
+            }
+
+            DataTable dtStockProducts = new DataTable();
+            dtStockProducts.Columns.Add("Id_producto", typeof(string));
+            dtStockProducts.Columns.Add("Stock_inicial_producto", typeof(string));
+            dtStockProducts.Columns.Add("Stock_final_producto", typeof(string));
+            dtStockProducts.Columns.Add("Diferencia_producto", typeof(string));
+            dtStockProducts.Columns.Add("Nombre_producto", typeof(string));
+
+            foreach(ProductoResumenStock prRe in productoResumen)
+            {
+                DataRow newRow = dtStockProducts.NewRow();
+                newRow["Id_producto"] = prRe.Id_producto;
+                newRow["Stock_inicial_producto"] = prRe.Stock_inicial_producto.ToString("N2").Replace(",00", "") + " " + prRe.Medicion.ToLower();
+                newRow["Stock_final_producto"] = prRe.Stock_final_producto.ToString("N2").Replace(",00", "") + " " + prRe.Medicion.ToLower();
+                newRow["Diferencia_producto"] = prRe.Diferencia_producto.ToString("N2").Replace(",00", "") + " " + prRe.Medicion.ToLower();
+                newRow["Nombre_producto"] = prRe.Nombre_producto;
+                dtStockProducts.Rows.Add(newRow);
             }
 
             this.ObtenerReporte(dtStockProducts, dtNovedadesAdd);
@@ -320,6 +401,15 @@ namespace CapaPresentacion.Formularios.FormsEstadisticas
             //}
         }
 
+        public class ProductoResumenStock
+        {
+            public int Id_producto { get; set; }
+            public string Nombre_producto { get; set; }
+            public decimal Stock_inicial_producto { get; set; }
+            public decimal Stock_final_producto { get; set; }
+            public decimal Diferencia_producto { get; set; }
+            public string Medicion { get; set; }
+        }
         public class TipoResumen
         {
             public int Id_tipo { get; set; }

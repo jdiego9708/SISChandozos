@@ -64,7 +64,7 @@ namespace CapaPresentacion.Formularios.FormsProductos
 
             if (producto.Last_stock != null)
             {
-                this.txtStock.Text = producto.Last_stock.Total_stock.ToString("N") + $" {producto.Last_stock.Type_medition}";
+                this.txtStock.Text = producto.Last_stock.Total_stock.ToString("N").Replace(",00", "") + $" {producto.Last_stock.Type_medition}";
             }              
             else
                 this.txtStock.Text = "0";

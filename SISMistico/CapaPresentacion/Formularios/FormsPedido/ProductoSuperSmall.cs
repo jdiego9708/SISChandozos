@@ -30,6 +30,8 @@ namespace CapaPresentacion.Formularios.FormsPedido
                 info.Append($" | Total: {detalle.Precio_total:C}");
             }
 
+
+
             this.txtInfo.Text = info.ToString();
         }
 
