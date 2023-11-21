@@ -189,6 +189,8 @@ namespace CapaPresentacion.Formularios.FormsPedido
                     frmDevueltas.OnBtnSaveClick += FrmDevueltas_OnBtnSaveClick;
                     frmDevueltas.AsignarDatos(venta.Total_final);
                     frmDevueltas.ShowDialog();
+
+
                  
                 }
                 MensajeEspera.CloseForm();
@@ -255,7 +257,7 @@ namespace CapaPresentacion.Formularios.FormsPedido
                             }
 
                             MensajeEspera.CloseForm();
-                            Mensajes.MensajeOkForm("Se realizó la facturación correctamente");
+                            //Mensajes.MensajeOkForm("Se realizó la facturación correctamente");
                             this.OnFacturarPedidoSuccess?.Invoke(this.Pedido, e);
                             this.Close();
                         }

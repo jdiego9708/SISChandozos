@@ -159,7 +159,7 @@
             this.rdNinguna.AutoSize = true;
             this.rdNinguna.Checked = true;
             this.rdNinguna.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rdNinguna.Location = new System.Drawing.Point(119, 22);
+            this.rdNinguna.Location = new System.Drawing.Point(113, 22);
             this.rdNinguna.Margin = new System.Windows.Forms.Padding(4);
             this.rdNinguna.Name = "rdNinguna";
             this.rdNinguna.Size = new System.Drawing.Size(88, 25);
@@ -200,28 +200,28 @@
             // 
             this.rdCorreo.AutoSize = true;
             this.rdCorreo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rdCorreo.Location = new System.Drawing.Point(4, 10);
+            this.rdCorreo.Location = new System.Drawing.Point(4, 37);
             this.rdCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.rdCorreo.Name = "rdCorreo";
-            this.rdCorreo.Size = new System.Drawing.Size(120, 46);
+            this.rdCorreo.Size = new System.Drawing.Size(76, 25);
             this.rdCorreo.TabIndex = 1;
-            this.rdCorreo.Tag = "Correo";
-            this.rdCorreo.Text = "Enviar correo\r\nelectrónico";
+            this.rdCorreo.Tag = "CORREO";
+            this.rdCorreo.Text = "Correo";
             this.rdCorreo.UseVisualStyleBackColor = true;
+            this.rdCorreo.Visible = false;
             // 
             // rdImprimir
             // 
             this.rdImprimir.AutoSize = true;
             this.rdImprimir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rdImprimir.Location = new System.Drawing.Point(214, 5);
+            this.rdImprimir.Location = new System.Drawing.Point(16, 24);
             this.rdImprimir.Margin = new System.Windows.Forms.Padding(4);
             this.rdImprimir.Name = "rdImprimir";
             this.rdImprimir.Size = new System.Drawing.Size(89, 25);
             this.rdImprimir.TabIndex = 0;
-            this.rdImprimir.Tag = "Imprimir";
+            this.rdImprimir.Tag = "IMPRIMIR";
             this.rdImprimir.Text = "Imprimir";
             this.rdImprimir.UseVisualStyleBackColor = true;
-            this.rdImprimir.Visible = false;
             // 
             // lblTotal
             // 
@@ -379,6 +379,7 @@
             this.groupBox4.TabIndex = 27;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Correo";
+            this.groupBox4.Visible = false;
             // 
             // txtCorreo
             // 

@@ -69,7 +69,6 @@ namespace CapaPresentacion
         }
 
         ReportParameter[] reportParameters;
-
         private void FrmFacturaFinal_Load(object sender, EventArgs e)
         {
             try
@@ -81,7 +80,6 @@ namespace CapaPresentacion
                 Mensajes.MensajeErrorForm(ex.Message);
             }
         }
-
         public void AsignarTablasPrecuenta(List<string> variables)
         {
             try
@@ -110,7 +108,6 @@ namespace CapaPresentacion
             }
             //int rows = this.TablaDetalleVenta.Rows.Count;
         }
-
         public void AsignarTablasCuentaFinal()
         {
             this.Is_precuenta = false;
@@ -121,7 +118,7 @@ namespace CapaPresentacion
             this.Controls.Add(this.reportViewer1);
 
             this.reportParameters = new ReportParameter[2];
-            this.reportParameters[0] = new ReportParameter("Titulo", "Restaurante Casa Grande");
+            this.reportParameters[0] = new ReportParameter("Titulo", "Chandozos");
             this.reportParameters[1] = new ReportParameter("NumFactura", this.ComprobacionNumFacturas().ToString());
 
             this.reportViewer1.LocalReport.SetParameters(this.reportParameters);
@@ -135,7 +132,6 @@ namespace CapaPresentacion
             ReportDataSource dsDetallePago = new ReportDataSource("DetallePago", this.TablaDetalleVenta);
             reportViewer1.LocalReport.DataSources.Add(dsDetallePago);
         }
-
         public void ImprimirFactura(int Repetir)
         {
             try

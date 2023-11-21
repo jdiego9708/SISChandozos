@@ -14,7 +14,6 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using CapaNegocio;
-using CapaPresentacion.Formularios.FormsNotas;
 using CapaPresentacion.Formularios.FormsMovimientos;
 using CapaPresentacion.Formularios.FormsEstadisticas;
 using CapaEntidades.Models;
@@ -598,26 +597,26 @@ namespace CapaPresentacion.Formularios.FormsPrincipales
             EEmpleado eEmpleado = new EEmpleado(row);
             try
             {
-                FrmObservarNotas frm = new FrmObservarNotas
-                {
-                    TopLevel = false
-                };
-                frm.AsignarDatos(eEmpleado);
-                Form FormComprobado = this.ComprobarExistencia(frm);
-                if (FormComprobado != null)
-                {
-                    frm.WindowState = FormWindowState.Normal;
-                    frm.Activate();
-                }
-                else
-                {
-                    frm.FormBorderStyle = FormBorderStyle.Fixed3D;
-                    this.panel1.Controls.Add(frm);
-                    this.panel1.Tag = frm;
-                    frm.Show();
-                }
-                frm.BringToFront();
-                frm.Activate();
+                //FrmObservarNotas frm = new FrmObservarNotas
+                //{
+                //    TopLevel = false
+                //};
+                //frm.AsignarDatos(eEmpleado);
+                //Form FormComprobado = this.ComprobarExistencia(frm);
+                //if (FormComprobado != null)
+                //{
+                //    frm.WindowState = FormWindowState.Normal;
+                //    frm.Activate();
+                //}
+                //else
+                //{
+                //    frm.FormBorderStyle = FormBorderStyle.Fixed3D;
+                //    this.panel1.Controls.Add(frm);
+                //    this.panel1.Tag = frm;
+                //    frm.Show();
+                //}
+                //frm.BringToFront();
+                //frm.Activate();
             }
             catch (Exception ex)
             {

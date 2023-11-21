@@ -1,7 +1,9 @@
-﻿using CapaNegocio;
+﻿using CapaEntidades.Models;
+using CapaNegocio;
 using CapaPresentacion.ReportesFacturas.Comandas;
 using Microsoft.Reporting.WinForms;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 
@@ -30,7 +32,6 @@ namespace CapaPresentacion
             this.reportViewer1.LocalReport.ReportEmbeddedResource =
                 "CapaPresentacion.ReportesFacturas.Comandas.ComandasPedido.rdlc";
         }
-
         private int ComprobacionNumComandas()
         {
             var fecha = ConfigComandas.Default.Fecha;
@@ -64,7 +65,6 @@ namespace CapaPresentacion
 
             return numcomanda;
         }
-
         public void ImprimirFactura(int Repetir)
         {
             try
@@ -77,7 +77,7 @@ namespace CapaPresentacion
                 reportParameters[0] = new ReportParameter("parameterObservaciones", this.ObservacionesGeneral);
                 reportParameters[1] = new ReportParameter("parameterHora", DateTime.Now.ToShortTimeString());
                 reportParameters[2] = new ReportParameter("NumeroComanda", num.ToString());
-                reportParameters[3] = new ReportParameter("Titulo", Titulo == string.Empty ? "Casa Grande" : Titulo);
+                reportParameters[3] = new ReportParameter("Titulo", Titulo == string.Empty ? "Chandozos" : Titulo);
                 this.reportViewer1.LocalReport.SetParameters(reportParameters);
 
                 ReportDataSource dsDatosPedido = new ReportDataSource("DatosPedido", this.TablaDatosPedido);
@@ -102,7 +102,6 @@ namespace CapaPresentacion
                 Mensajes.MensajeErrorForm(ex.Message);
             }
         }
-
         public void AsignarTablas()
         {
             this.TablaDatosPedido =
@@ -123,12 +122,10 @@ namespace CapaPresentacion
                     nombre += Environment.NewLine + "**" + observaciones;
 
                 row["Nombre"] = nombre;
-
             }
 
             this.ObservacionesGeneral = "Cantidad de platos/bebidas " + cantidad_productos;
         }
-
         public void AsignarTablas(DataTable detallepedido)
         {
             this.TablaDetallePedido = null;
@@ -147,9 +144,53 @@ namespace CapaPresentacion
                 row["Nombre"] = nombre;
             }
 
-            this.ObservacionesGeneral = "Cantidad de platos/bebidas " + cantidad_productos;
+            this.ObservacionesGeneral = "Cantidad de productos " + cantidad_productos;
 
             this.TablaDetallePedido = detallepedido;
+
+            this.TablaDatosPedido =
+                NPedido.BuscarPedidos("ID PEDIDO", Convert.ToString(this.Id_pedido));
+        }
+        public void AsignarTablas(Pedidos pedido, List<Detalle_pedido> detalles)
+        {
+            this.Id_pedido = pedido.Id_pedido;
+
+            this.TablaDetallePedido = null;
+            this.TablaDetallePedido = new DataTable();
+
+            this.TablaDetallePedido.Columns.Add("Id_pedido", typeof(int));
+            this.TablaDetallePedido.Columns.Add("Id_tipo", typeof(int));
+            this.TablaDetallePedido.Columns.Add("Tipo", typeof(string));
+            this.TablaDetallePedido.Columns.Add("Cantidad", typeof(int));
+            this.TablaDetallePedido.Columns.Add("Nombre", typeof(string));
+            this.TablaDetallePedido.Columns.Add("Observaciones", typeof(string));
+            this.TablaDetallePedido.Columns.Add("Precio", typeof(string));
+            this.TablaDetallePedido.Columns.Add("Total", typeof(string));
+
+            int cantidad_productos = 0;
+            foreach (Detalle_pedido detalle in detalles)
+            {
+                int cantidad = detalle.Cantidad;
+                string nombre = detalle.Producto.Nombre_producto;
+                string observaciones = detalle.Observaciones;
+                cantidad_productos += cantidad;
+
+                if (!string.IsNullOrEmpty(observaciones))
+                    nombre += Environment.NewLine + "**" + observaciones;
+
+                DataRow rowAdd = this.TablaDetallePedido.NewRow();
+                rowAdd["Id_pedido"] = pedido.Id_pedido;
+                rowAdd["Id_tipo"] = detalle.Id_producto;
+                rowAdd["Tipo"] = "PRODUCTO";
+                rowAdd["Nombre"] = nombre;
+                rowAdd["Precio"] = detalle.Producto.Precio_producto.ToString("C").Replace(",00", "");
+                rowAdd["Cantidad"] = cantidad_productos;
+                rowAdd["Total"] = detalle.Producto.Precio_producto * cantidad_productos;
+                rowAdd["Observaciones"] = observaciones;
+                this.TablaDetallePedido.Rows.Add(rowAdd);
+            }
+
+            this.ObservacionesGeneral = "Cantidad de productos " + cantidad_productos;
 
             this.TablaDatosPedido =
                 NPedido.BuscarPedidos("ID PEDIDO", Convert.ToString(this.Id_pedido));

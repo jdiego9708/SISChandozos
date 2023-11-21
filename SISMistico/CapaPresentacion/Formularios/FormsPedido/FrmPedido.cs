@@ -18,6 +18,7 @@
     using System.Threading;
     using System.Threading.Tasks;
     using System.Windows.Forms;
+    using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
     public partial class FrmPedido : Form
     {
@@ -94,15 +95,21 @@
                     estado_pedido = "PENDIENTE";
                     tipo_pedido = "CUENTA ABIERTA";
 
-                    if (this.ClienteSelected == null)
+                    //if (this.ClienteSelected == null)
+                    //{
+                    //    FrmObservarClientes frmObservarClientes = new FrmObservarClientes()
+                    //    {
+                    //        StartPosition = FormStartPosition.CenterScreen,
+                    //    };
+                    //    frmObservarClientes.OnBtnNext += FrmObservarClientes_OnBtnNext;
+                    //    frmObservarClientes.ShowDialog();
+                    //}
+
+                    this.ClienteSelected = new Clientes()
                     {
-                        FrmObservarClientes frmObservarClientes = new FrmObservarClientes()
-                        {
-                            StartPosition = FormStartPosition.CenterScreen,
-                        };
-                        frmObservarClientes.OnBtnNext += FrmObservarClientes_OnBtnNext;
-                        frmObservarClientes.ShowDialog();
-                    }
+                        Id_cliente = 0,
+                        Nombre_cliente = "Cliente Chandozo",
+                    };
                 }
 
                 if (this.ClienteSelected == null)
@@ -142,6 +149,7 @@
                         Id_pedido = id_pedido,
                         Id_producto = product.Id_producto,
                         Id_tipo = product.Id_producto,
+                        Producto = product.Producto,
                         Fecha_detalle = DateTime.Now,
                         Hora_detalle = DateTime.Now.TimeOfDay,
                         Precio = product.DetallePedido.Precio,
@@ -201,7 +209,10 @@
                     if (!rpta.Equals("OK"))
                         throw new Exception($"No se pudo insertar un detalle de un pedido, se canceló la operación | {rpta}");
                 }
-                if (this.chkFacturar.Checked && this.Pedido == null)
+
+                this.Pedido = pedido;
+
+                if (this.chkFacturar.Checked)
                 {
                     MensajeEspera.CloseForm();
 
@@ -213,6 +224,13 @@
                         Pedido = pedido,
                     };
                     frmFacturarPedido.ShowDialog();
+                }
+                else
+                {
+                    //FrmComandas frmComandas = new FrmComandas();
+                    //frmComandas.ObtenerReporte("Chandozos | Comanda");
+                    //frmComandas.AsignarTablas(pedido, detalles);
+                    //frmComandas.ImprimirFactura(1);
                 }
 
                 MensajeEspera.CloseForm();

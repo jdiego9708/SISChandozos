@@ -73,9 +73,9 @@
             // 
             this.groupBox2.Controls.Add(this.txtBase);
             this.groupBox2.Location = new System.Drawing.Point(9, 68);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(150, 86);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
@@ -88,13 +88,13 @@
             this.txtBase.BackColor = System.Drawing.Color.White;
             this.txtBase.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBase.Enabled = false;
-            this.txtBase.Font = new System.Drawing.Font("Segoe UI Emoji", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBase.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
-            this.txtBase.Location = new System.Drawing.Point(6, 35);
-            this.txtBase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBase.Location = new System.Drawing.Point(6, 40);
+            this.txtBase.Margin = new System.Windows.Forms.Padding(4);
             this.txtBase.Name = "txtBase";
             this.txtBase.ReadOnly = true;
-            this.txtBase.Size = new System.Drawing.Size(137, 39);
+            this.txtBase.Size = new System.Drawing.Size(137, 22);
             this.txtBase.TabIndex = 1;
             this.txtBase.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -102,9 +102,9 @@
             // 
             this.groupBox3.Controls.Add(this.txtTotalVentas);
             this.groupBox3.Location = new System.Drawing.Point(9, 159);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(150, 86);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
@@ -117,13 +117,13 @@
             this.txtTotalVentas.BackColor = System.Drawing.Color.White;
             this.txtTotalVentas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTotalVentas.Enabled = false;
-            this.txtTotalVentas.Font = new System.Drawing.Font("Segoe UI Emoji", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalVentas.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotalVentas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
-            this.txtTotalVentas.Location = new System.Drawing.Point(6, 35);
-            this.txtTotalVentas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTotalVentas.Location = new System.Drawing.Point(6, 40);
+            this.txtTotalVentas.Margin = new System.Windows.Forms.Padding(4);
             this.txtTotalVentas.Name = "txtTotalVentas";
             this.txtTotalVentas.ReadOnly = true;
-            this.txtTotalVentas.Size = new System.Drawing.Size(137, 39);
+            this.txtTotalVentas.Size = new System.Drawing.Size(137, 22);
             this.txtTotalVentas.TabIndex = 1;
             this.txtTotalVentas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -131,9 +131,9 @@
             // 
             this.gbBase.Controls.Add(this.txtCambiarBase);
             this.gbBase.Location = new System.Drawing.Point(177, 68);
-            this.gbBase.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbBase.Margin = new System.Windows.Forms.Padding(2);
             this.gbBase.Name = "gbBase";
-            this.gbBase.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbBase.Padding = new System.Windows.Forms.Padding(2);
             this.gbBase.Size = new System.Drawing.Size(152, 86);
             this.gbBase.TabIndex = 2;
             this.gbBase.TabStop = false;
@@ -146,12 +146,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCambiarBase.BackColor = System.Drawing.Color.White;
             this.txtCambiarBase.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCambiarBase.Font = new System.Drawing.Font("Segoe UI Emoji", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCambiarBase.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCambiarBase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
-            this.txtCambiarBase.Location = new System.Drawing.Point(12, 34);
-            this.txtCambiarBase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCambiarBase.Location = new System.Drawing.Point(12, 39);
+            this.txtCambiarBase.Margin = new System.Windows.Forms.Padding(4);
             this.txtCambiarBase.Name = "txtCambiarBase";
-            this.txtCambiarBase.Size = new System.Drawing.Size(128, 40);
+            this.txtCambiarBase.Size = new System.Drawing.Size(128, 22);
             this.txtCambiarBase.TabIndex = 1;
             this.txtCambiarBase.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.toolTip1.SetToolTip(this.txtCambiarBase, "Nuevo valor para la base inicial");
@@ -160,9 +160,9 @@
             // 
             this.gbGuardarBase.Controls.Add(this.btnSaveBase);
             this.gbGuardarBase.Location = new System.Drawing.Point(344, 68);
-            this.gbGuardarBase.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbGuardarBase.Margin = new System.Windows.Forms.Padding(2);
             this.gbGuardarBase.Name = "gbGuardarBase";
-            this.gbGuardarBase.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbGuardarBase.Padding = new System.Windows.Forms.Padding(2);
             this.gbGuardarBase.Size = new System.Drawing.Size(82, 86);
             this.gbGuardarBase.TabIndex = 3;
             this.gbGuardarBase.TabStop = false;
@@ -180,7 +180,7 @@
             this.btnSaveBase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaveBase.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveBase.Location = new System.Drawing.Point(16, 26);
-            this.btnSaveBase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSaveBase.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaveBase.Name = "btnSaveBase";
             this.btnSaveBase.Size = new System.Drawing.Size(52, 52);
             this.btnSaveBase.TabIndex = 29;
@@ -191,9 +191,9 @@
             // 
             this.groupBox8.Controls.Add(this.txtEgresos);
             this.groupBox8.Location = new System.Drawing.Point(177, 159);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox8.Size = new System.Drawing.Size(152, 86);
             this.groupBox8.TabIndex = 5;
             this.groupBox8.TabStop = false;
@@ -206,13 +206,13 @@
             this.txtEgresos.BackColor = System.Drawing.Color.White;
             this.txtEgresos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEgresos.Enabled = false;
-            this.txtEgresos.Font = new System.Drawing.Font("Segoe UI Emoji", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEgresos.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEgresos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
-            this.txtEgresos.Location = new System.Drawing.Point(6, 35);
-            this.txtEgresos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEgresos.Location = new System.Drawing.Point(6, 40);
+            this.txtEgresos.Margin = new System.Windows.Forms.Padding(4);
             this.txtEgresos.Name = "txtEgresos";
             this.txtEgresos.ReadOnly = true;
-            this.txtEgresos.Size = new System.Drawing.Size(140, 39);
+            this.txtEgresos.Size = new System.Drawing.Size(140, 22);
             this.txtEgresos.TabIndex = 1;
             this.txtEgresos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -220,9 +220,9 @@
             // 
             this.groupBox10.Controls.Add(this.txtOtrosIngresos);
             this.groupBox10.Location = new System.Drawing.Point(9, 250);
-            this.groupBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox10.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox10.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox10.Size = new System.Drawing.Size(150, 86);
             this.groupBox10.TabIndex = 7;
             this.groupBox10.TabStop = false;
@@ -235,13 +235,13 @@
             this.txtOtrosIngresos.BackColor = System.Drawing.Color.White;
             this.txtOtrosIngresos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtOtrosIngresos.Enabled = false;
-            this.txtOtrosIngresos.Font = new System.Drawing.Font("Segoe UI Emoji", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOtrosIngresos.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOtrosIngresos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
-            this.txtOtrosIngresos.Location = new System.Drawing.Point(6, 35);
-            this.txtOtrosIngresos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtOtrosIngresos.Location = new System.Drawing.Point(6, 40);
+            this.txtOtrosIngresos.Margin = new System.Windows.Forms.Padding(4);
             this.txtOtrosIngresos.Name = "txtOtrosIngresos";
             this.txtOtrosIngresos.ReadOnly = true;
-            this.txtOtrosIngresos.Size = new System.Drawing.Size(137, 39);
+            this.txtOtrosIngresos.Size = new System.Drawing.Size(137, 22);
             this.txtOtrosIngresos.TabIndex = 1;
             this.txtOtrosIngresos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -257,7 +257,7 @@
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.Location = new System.Drawing.Point(16, 25);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(52, 52);
             this.btnRefresh.TabIndex = 32;
@@ -276,7 +276,7 @@
             this.btnReportInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReportInventario.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportInventario.Location = new System.Drawing.Point(49, 27);
-            this.btnReportInventario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReportInventario.Margin = new System.Windows.Forms.Padding(4);
             this.btnReportInventario.Name = "btnReportInventario";
             this.btnReportInventario.Size = new System.Drawing.Size(52, 52);
             this.btnReportInventario.TabIndex = 32;
@@ -295,7 +295,7 @@
             this.btnResumenDiario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnResumenDiario.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnResumenDiario.Location = new System.Drawing.Point(49, 27);
-            this.btnResumenDiario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnResumenDiario.Margin = new System.Windows.Forms.Padding(4);
             this.btnResumenDiario.Name = "btnResumenDiario";
             this.btnResumenDiario.Size = new System.Drawing.Size(52, 52);
             this.btnResumenDiario.TabIndex = 32;
@@ -308,7 +308,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(544, 17);
             this.panel1.TabIndex = 10;
@@ -320,9 +320,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.txtInfoPagos);
             this.groupBox1.Location = new System.Drawing.Point(9, 341);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(524, 140);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
@@ -335,10 +335,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtInfoPagos.BackColor = System.Drawing.Color.White;
             this.txtInfoPagos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtInfoPagos.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInfoPagos.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInfoPagos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
             this.txtInfoPagos.Location = new System.Drawing.Point(6, 24);
-            this.txtInfoPagos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtInfoPagos.Margin = new System.Windows.Forms.Padding(4);
             this.txtInfoPagos.Multiline = true;
             this.txtInfoPagos.Name = "txtInfoPagos";
             this.txtInfoPagos.ReadOnly = true;
@@ -351,9 +351,9 @@
             // 
             this.groupBox4.Controls.Add(this.txtTotalTurno);
             this.groupBox4.Location = new System.Drawing.Point(177, 250);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(152, 86);
             this.groupBox4.TabIndex = 6;
             this.groupBox4.TabStop = false;
@@ -366,13 +366,13 @@
             this.txtTotalTurno.BackColor = System.Drawing.Color.White;
             this.txtTotalTurno.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTotalTurno.Enabled = false;
-            this.txtTotalTurno.Font = new System.Drawing.Font("Segoe UI Emoji", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalTurno.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotalTurno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
-            this.txtTotalTurno.Location = new System.Drawing.Point(6, 36);
-            this.txtTotalTurno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTotalTurno.Location = new System.Drawing.Point(6, 41);
+            this.txtTotalTurno.Margin = new System.Windows.Forms.Padding(4);
             this.txtTotalTurno.Name = "txtTotalTurno";
             this.txtTotalTurno.ReadOnly = true;
-            this.txtTotalTurno.Size = new System.Drawing.Size(140, 43);
+            this.txtTotalTurno.Size = new System.Drawing.Size(140, 22);
             this.txtTotalTurno.TabIndex = 1;
             this.txtTotalTurno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -380,9 +380,9 @@
             // 
             this.groupBox5.Controls.Add(this.btnResumenDiario);
             this.groupBox5.Location = new System.Drawing.Point(344, 159);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox5.Size = new System.Drawing.Size(154, 86);
             this.groupBox5.TabIndex = 33;
             this.groupBox5.TabStop = false;
@@ -392,9 +392,9 @@
             // 
             this.groupBox11.Controls.Add(this.btnRefresh);
             this.groupBox11.Location = new System.Drawing.Point(430, 68);
-            this.groupBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox11.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox11.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox11.Size = new System.Drawing.Size(82, 86);
             this.groupBox11.TabIndex = 33;
             this.groupBox11.TabStop = false;
@@ -404,9 +404,9 @@
             // 
             this.groupBox6.Controls.Add(this.btnReportInventario);
             this.groupBox6.Location = new System.Drawing.Point(344, 250);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox6.Size = new System.Drawing.Size(154, 86);
             this.groupBox6.TabIndex = 34;
             this.groupBox6.TabStop = false;
@@ -423,7 +423,7 @@
             this.btnCerrarCaja.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarCaja.Image")));
             this.btnCerrarCaja.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrarCaja.Location = new System.Drawing.Point(281, 23);
-            this.btnCerrarCaja.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCerrarCaja.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrarCaja.Name = "btnCerrarCaja";
             this.btnCerrarCaja.Size = new System.Drawing.Size(261, 43);
             this.btnCerrarCaja.TabIndex = 12;
@@ -441,7 +441,7 @@
             this.btnHistorialTurnos.Image = ((System.Drawing.Image)(resources.GetObject("btnHistorialTurnos.Image")));
             this.btnHistorialTurnos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHistorialTurnos.Location = new System.Drawing.Point(9, 23);
-            this.btnHistorialTurnos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHistorialTurnos.Margin = new System.Windows.Forms.Padding(4);
             this.btnHistorialTurnos.Name = "btnHistorialTurnos";
             this.btnHistorialTurnos.Size = new System.Drawing.Size(257, 43);
             this.btnHistorialTurnos.TabIndex = 9;
@@ -471,7 +471,7 @@
             this.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmTurno";
             this.Text = "Caja diaria";
             this.groupBox2.ResumeLayout(false);

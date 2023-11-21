@@ -32,12 +32,12 @@
             this.gbTurno = new System.Windows.Forms.GroupBox();
             this.panelTurno = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnAddNovedad = new System.Windows.Forms.Button();
             this.btnAddIngreso = new System.Windows.Forms.Button();
             this.btnAddGasto = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.graphicsVentas2 = new CapaPresentacion.Formularios.FormsEstadisticas.FormEstadisticasIniciales.GraphicsVentas();
             this.graphicsVentas1 = new CapaPresentacion.Formularios.FormsEstadisticas.FormEstadisticasIniciales.GraphicsVentas();
-            this.btnAddNovedad = new System.Windows.Forms.Button();
+            this.graphicsVentas2 = new CapaPresentacion.Formularios.FormsEstadisticas.FormEstadisticasIniciales.GraphicsVentas();
             this.gbTurno.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -52,7 +52,7 @@
             this.gbTurno.Margin = new System.Windows.Forms.Padding(2);
             this.gbTurno.Name = "gbTurno";
             this.gbTurno.Padding = new System.Windows.Forms.Padding(2);
-            this.gbTurno.Size = new System.Drawing.Size(571, 596);
+            this.gbTurno.Size = new System.Drawing.Size(571, 748);
             this.gbTurno.TabIndex = 0;
             this.gbTurno.TabStop = false;
             this.gbTurno.Text = "Caja del día";
@@ -64,7 +64,7 @@
             this.panelTurno.Location = new System.Drawing.Point(4, 26);
             this.panelTurno.Margin = new System.Windows.Forms.Padding(2);
             this.panelTurno.Name = "panelTurno";
-            this.panelTurno.Size = new System.Drawing.Size(562, 566);
+            this.panelTurno.Size = new System.Drawing.Size(562, 718);
             this.panelTurno.TabIndex = 0;
             // 
             // groupBox2
@@ -74,14 +74,33 @@
             this.groupBox2.Controls.Add(this.btnAddNovedad);
             this.groupBox2.Controls.Add(this.btnAddIngreso);
             this.groupBox2.Controls.Add(this.btnAddGasto);
-            this.groupBox2.Location = new System.Drawing.Point(981, -4);
+            this.groupBox2.Location = new System.Drawing.Point(1251, -4);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(218, 596);
+            this.groupBox2.Size = new System.Drawing.Size(217, 748);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Accesos directos";
+            // 
+            // btnAddNovedad
+            // 
+            this.btnAddNovedad.BackColor = System.Drawing.Color.White;
+            this.btnAddNovedad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddNovedad.FlatAppearance.BorderSize = 0;
+            this.btnAddNovedad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddNovedad.Font = new System.Drawing.Font("Segoe UI Emoji", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddNovedad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAddNovedad.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNovedad.Image")));
+            this.btnAddNovedad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddNovedad.Location = new System.Drawing.Point(3, 152);
+            this.btnAddNovedad.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddNovedad.Name = "btnAddNovedad";
+            this.btnAddNovedad.Size = new System.Drawing.Size(205, 56);
+            this.btnAddNovedad.TabIndex = 16;
+            this.btnAddNovedad.Text = "Registrar novedad";
+            this.btnAddNovedad.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddNovedad.UseVisualStyleBackColor = false;
             // 
             // btnAddIngreso
             // 
@@ -131,56 +150,37 @@
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(384, 596);
+            this.groupBox3.Size = new System.Drawing.Size(663, 748);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Estadísticas";
             // 
-            // graphicsVentas2
-            // 
-            this.graphicsVentas2.BackColor = System.Drawing.Color.White;
-            this.graphicsVentas2.Font = new System.Drawing.Font("Segoe UI Emoji", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.graphicsVentas2.Location = new System.Drawing.Point(7, 285);
-            this.graphicsVentas2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.graphicsVentas2.Name = "graphicsVentas2";
-            this.graphicsVentas2.Size = new System.Drawing.Size(358, 255);
-            this.graphicsVentas2.TabIndex = 1;
-            // 
             // graphicsVentas1
             // 
             this.graphicsVentas1.BackColor = System.Drawing.Color.White;
-            this.graphicsVentas1.Font = new System.Drawing.Font("Segoe UI Emoji", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.graphicsVentas1.Location = new System.Drawing.Point(5, 24);
-            this.graphicsVentas1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.graphicsVentas1.Font = new System.Drawing.Font("Segoe UI Emoji", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.graphicsVentas1.Location = new System.Drawing.Point(8, 19);
+            this.graphicsVentas1.Margin = new System.Windows.Forms.Padding(6);
             this.graphicsVentas1.Name = "graphicsVentas1";
-            this.graphicsVentas1.Size = new System.Drawing.Size(359, 255);
+            this.graphicsVentas1.Size = new System.Drawing.Size(648, 361);
             this.graphicsVentas1.TabIndex = 0;
             // 
-            // btnAddNovedad
+            // graphicsVentas2
             // 
-            this.btnAddNovedad.BackColor = System.Drawing.Color.White;
-            this.btnAddNovedad.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddNovedad.FlatAppearance.BorderSize = 0;
-            this.btnAddNovedad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddNovedad.Font = new System.Drawing.Font("Segoe UI Emoji", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddNovedad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnAddNovedad.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNovedad.Image")));
-            this.btnAddNovedad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddNovedad.Location = new System.Drawing.Point(3, 152);
-            this.btnAddNovedad.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAddNovedad.Name = "btnAddNovedad";
-            this.btnAddNovedad.Size = new System.Drawing.Size(205, 56);
-            this.btnAddNovedad.TabIndex = 16;
-            this.btnAddNovedad.Text = "Registrar novedad";
-            this.btnAddNovedad.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddNovedad.UseVisualStyleBackColor = false;
+            this.graphicsVentas2.BackColor = System.Drawing.Color.White;
+            this.graphicsVentas2.Font = new System.Drawing.Font("Segoe UI Emoji", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.graphicsVentas2.Location = new System.Drawing.Point(10, 379);
+            this.graphicsVentas2.Margin = new System.Windows.Forms.Padding(6);
+            this.graphicsVentas2.Name = "graphicsVentas2";
+            this.graphicsVentas2.Size = new System.Drawing.Size(648, 361);
+            this.graphicsVentas2.TabIndex = 1;
             // 
             // FrmAdministracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1208, 602);
+            this.ClientSize = new System.Drawing.Size(1477, 748);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.gbTurno);
@@ -205,8 +205,8 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnAddGasto;
         private System.Windows.Forms.Button btnAddIngreso;
+        private System.Windows.Forms.Button btnAddNovedad;
         private FormsEstadisticas.FormEstadisticasIniciales.GraphicsVentas graphicsVentas2;
         private FormsEstadisticas.FormEstadisticasIniciales.GraphicsVentas graphicsVentas1;
-        private System.Windows.Forms.Button btnAddNovedad;
     }
 }

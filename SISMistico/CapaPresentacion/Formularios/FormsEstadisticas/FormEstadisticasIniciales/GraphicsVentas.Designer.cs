@@ -82,7 +82,7 @@
             series1.MarkerSize = 0;
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(572, 316);
+            this.chart1.Size = new System.Drawing.Size(627, 316);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
@@ -92,7 +92,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(600, 355);
+            this.groupBox1.Size = new System.Drawing.Size(642, 355);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Gastos en los últimos 5 días";
@@ -102,7 +102,7 @@
             this.panel1.Controls.Add(this.chart1);
             this.panel1.Location = new System.Drawing.Point(6, 27);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(588, 322);
+            this.panel1.Size = new System.Drawing.Size(630, 322);
             this.panel1.TabIndex = 2;
             // 
             // GraphicsVentas
@@ -114,7 +114,7 @@
             this.Font = new System.Drawing.Font("Segoe UI Emoji", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "GraphicsVentas";
-            this.Size = new System.Drawing.Size(603, 361);
+            this.Size = new System.Drawing.Size(648, 361);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

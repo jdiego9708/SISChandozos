@@ -141,7 +141,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Left>0.02998cm</Left>
+            <Left>3.67645cm</Left>
             <Height>0.6cm</Height>
             <Width>7.8cm</Width>
             <Style>
@@ -175,7 +175,7 @@
               </Paragraph>
             </Paragraphs>
             <Top>1.64099cm</Top>
-            <Left>0.02998cm</Left>
+            <Left>3.67645cm</Left>
             <Height>0.65263cm</Height>
             <Width>7.87056cm</Width>
             <ZIndex>1</ZIndex>
@@ -209,7 +209,7 @@
               </Paragraph>
             </Paragraphs>
             <Top>2.36418cm</Top>
-            <Left>0.02998cm</Left>
+            <Left>3.67645cm</Left>
             <Height>0.8643cm</Height>
             <Width>4.01646cm</Width>
             <ZIndex>2</ZIndex>
@@ -225,7 +225,7 @@
           </Textbox>
           <Line Name="Line1">
             <Top>0.74111cm</Top>
-            <Left>0.02998cm</Left>
+            <Left>3.67645cm</Left>
             <Height>0cm</Height>
             <Width>7.8cm</Width>
             <ZIndex>3</ZIndex>
@@ -237,7 +237,7 @@
           </Line>
           <Line Name="Line2">
             <Top>0.67056cm</Top>
-            <Left>0.02998cm</Left>
+            <Left>3.67645cm</Left>
             <Height>0cm</Height>
             <Width>7.8cm</Width>
             <ZIndex>4</ZIndex>
@@ -268,7 +268,7 @@
               </Paragraph>
             </Paragraphs>
             <Top>0.81167cm</Top>
-            <Left>0.00999cm</Left>
+            <Left>3.65646cm</Left>
             <Height>0.82932cm</Height>
             <Width>4.01646cm</Width>
             <ZIndex>5</ZIndex>
@@ -302,7 +302,7 @@
               </Paragraph>
             </Paragraphs>
             <Top>3.29903cm</Top>
-            <Left>0.02998cm</Left>
+            <Left>3.67645cm</Left>
             <Height>0.60911cm</Height>
             <Width>7.8cm</Width>
             <ZIndex>6</ZIndex>
@@ -337,7 +337,7 @@
               </Paragraph>
             </Paragraphs>
             <Top>3.94342cm</Top>
-            <Left>0.04055cm</Left>
+            <Left>3.68702cm</Left>
             <Height>0.70256cm</Height>
             <Width>7.81cm</Width>
             <ZIndex>7</ZIndex>
@@ -372,7 +372,6 @@
               </Paragraph>
             </Paragraphs>
             <Top>2.36418cm</Top>
-            <Left>4.02645cm</Left>
             <Height>0.8643cm</Height>
             <Width>3.87409cm</Width>
             <ZIndex>8</ZIndex>
@@ -557,7 +556,7 @@
             </TablixRowHierarchy>
             <DataSetName>DetallePedido</DataSetName>
             <Top>4.82622cm</Top>
-            <Left>0.08055cm</Left>
+            <Left>3.72702cm</Left>
             <Height>1.27938cm</Height>
             <Width>7.81999cm</Width>
             <ZIndex>9</ZIndex>
@@ -572,7 +571,7 @@
           </Tablix>
           <Line Name="Line5">
             <Top>6.17616cm</Top>
-            <Left>0.11053cm</Left>
+            <Left>3.757cm</Left>
             <Height>0cm</Height>
             <Width>7.8cm</Width>
             <ZIndex>10</ZIndex>
@@ -602,7 +601,7 @@
               </Paragraph>
             </Paragraphs>
             <Top>6.21143cm</Top>
-            <Left>0.09054cm</Left>
+            <Left>3.73701cm</Left>
             <Height>1.99376cm</Height>
             <Width>7.76001cm</Width>
             <ZIndex>11</ZIndex>
@@ -637,7 +636,7 @@
               </Paragraph>
             </Paragraphs>
             <Top>0.81167cm</Top>
-            <Left>4.09701cm</Left>
+            <Left>7.74348cm</Left>
             <Height>0.82932cm</Height>
             <Width>3.78354cm</Width>
             <ZIndex>12</ZIndex>
@@ -655,7 +654,7 @@
         <Height>8.20519cm</Height>
         <Style />
       </Body>
-      <Width>7.98109cm</Width>
+      <Width>11.62756cm</Width>
       <Page>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>

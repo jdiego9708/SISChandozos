@@ -209,8 +209,6 @@ namespace CapaPresentacion.Formularios.FormsPedido
             // 
             this.chkFacturar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkFacturar.AutoSize = true;
-            this.chkFacturar.Checked = true;
-            this.chkFacturar.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkFacturar.Location = new System.Drawing.Point(765, 23);
             this.chkFacturar.Margin = new System.Windows.Forms.Padding(2);
             this.chkFacturar.Name = "chkFacturar";
@@ -220,7 +218,6 @@ namespace CapaPresentacion.Formularios.FormsPedido
             this.toolTip1.SetToolTip(this.chkFacturar, "Seleccione esta opción si desea facturar el pedido de inmediato, si no lo marca p" +
         "odría facturar después el pedido");
             this.chkFacturar.UseVisualStyleBackColor = true;
-            this.chkFacturar.Visible = false;
             // 
             // btnSave
             // 
