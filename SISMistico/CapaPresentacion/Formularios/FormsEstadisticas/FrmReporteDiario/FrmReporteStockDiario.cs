@@ -173,11 +173,21 @@ namespace CapaPresentacion.Formularios.FormsEstadisticas
 
             foreach(ProductoResumenStock prRe in productoResumen)
             {
+                string medition = string.Empty;
+                if (string.IsNullOrEmpty(prRe.Medicion))
+                {
+                    medition = "SIN STOCK";
+                }
+                else
+                {
+                    medition = prRe.Medicion;
+                }
+
                 DataRow newRow = dtStockProducts.NewRow();
                 newRow["Id_producto"] = prRe.Id_producto;
-                newRow["Stock_inicial_producto"] = prRe.Stock_inicial_producto.ToString("N2").Replace(",00", "") + " " + prRe.Medicion.ToLower();
-                newRow["Stock_final_producto"] = prRe.Stock_final_producto.ToString("N2").Replace(",00", "") + " " + prRe.Medicion.ToLower();
-                newRow["Diferencia_producto"] = prRe.Diferencia_producto.ToString("N2").Replace(",00", "") + " " + prRe.Medicion.ToLower();
+                newRow["Stock_inicial_producto"] = prRe.Stock_inicial_producto.ToString("N2").Replace(",00", "") + " " + medition;
+                newRow["Stock_final_producto"] = prRe.Stock_final_producto.ToString("N2").Replace(",00", "") + " " + medition;
+                newRow["Diferencia_producto"] = prRe.Diferencia_producto.ToString("N2").Replace(",00", "") + " " + medition;
                 newRow["Nombre_producto"] = prRe.Nombre_producto;
                 dtStockProducts.Rows.Add(newRow);
             }

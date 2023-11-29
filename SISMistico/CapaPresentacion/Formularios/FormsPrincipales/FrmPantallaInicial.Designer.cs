@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPantallaInicial));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panelVentas = new CapaPresentacion.Controles.CustomGridPanel();
             this.btnHistorialVentas = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.panelCuentas = new CapaPresentacion.Controles.CustomGridPanel();
             this.btnNuevaVenta = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.panelCuentas = new CapaPresentacion.Controles.CustomGridPanel();
-            this.panelVentas = new CapaPresentacion.Controles.CustomGridPanel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -48,10 +48,24 @@
             this.groupBox1.Controls.Add(this.btnHistorialVentas);
             this.groupBox1.Location = new System.Drawing.Point(4, -2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(922, 641);
+            this.groupBox1.Size = new System.Drawing.Size(629, 641);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Últimas 20 ventas";
+            // 
+            // panelVentas
+            // 
+            this.panelVentas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelVentas.AutoScroll = true;
+            this.panelVentas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelVentas.BackgroundImage")));
+            this.panelVentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panelVentas.Location = new System.Drawing.Point(9, 103);
+            this.panelVentas.Name = "panelVentas";
+            this.panelVentas.PageSize = 10;
+            this.panelVentas.Size = new System.Drawing.Size(614, 532);
+            this.panelVentas.TabIndex = 5;
             // 
             // btnHistorialVentas
             // 
@@ -67,7 +81,7 @@
             this.btnHistorialVentas.Location = new System.Drawing.Point(9, 37);
             this.btnHistorialVentas.Margin = new System.Windows.Forms.Padding(6);
             this.btnHistorialVentas.Name = "btnHistorialVentas";
-            this.btnHistorialVentas.Size = new System.Drawing.Size(907, 57);
+            this.btnHistorialVentas.Size = new System.Drawing.Size(614, 57);
             this.btnHistorialVentas.TabIndex = 4;
             this.btnHistorialVentas.Text = "Historial de ventas";
             this.btnHistorialVentas.UseVisualStyleBackColor = true;
@@ -79,12 +93,26 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.panelCuentas);
             this.groupBox2.Controls.Add(this.btnNuevaVenta);
-            this.groupBox2.Location = new System.Drawing.Point(932, -2);
+            this.groupBox2.Location = new System.Drawing.Point(637, -2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(471, 641);
+            this.groupBox2.Size = new System.Drawing.Size(400, 641);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Cuentas en curso";
+            // 
+            // panelCuentas
+            // 
+            this.panelCuentas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelCuentas.AutoScroll = true;
+            this.panelCuentas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelCuentas.BackgroundImage")));
+            this.panelCuentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panelCuentas.Location = new System.Drawing.Point(9, 103);
+            this.panelCuentas.Name = "panelCuentas";
+            this.panelCuentas.PageSize = 10;
+            this.panelCuentas.Size = new System.Drawing.Size(385, 532);
+            this.panelCuentas.TabIndex = 6;
             // 
             // btnNuevaVenta
             // 
@@ -100,7 +128,7 @@
             this.btnNuevaVenta.Location = new System.Drawing.Point(9, 37);
             this.btnNuevaVenta.Margin = new System.Windows.Forms.Padding(6);
             this.btnNuevaVenta.Name = "btnNuevaVenta";
-            this.btnNuevaVenta.Size = new System.Drawing.Size(446, 57);
+            this.btnNuevaVenta.Size = new System.Drawing.Size(375, 57);
             this.btnNuevaVenta.TabIndex = 5;
             this.btnNuevaVenta.Text = "Nueva venta";
             this.btnNuevaVenta.UseVisualStyleBackColor = true;
@@ -117,46 +145,18 @@
             this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(1409, 12);
+            this.btnClose.Location = new System.Drawing.Point(1043, 12);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(30, 30);
             this.btnClose.TabIndex = 32;
             this.btnClose.UseVisualStyleBackColor = true;
-            // 
-            // panelCuentas
-            // 
-            this.panelCuentas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelCuentas.AutoScroll = true;
-            this.panelCuentas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelCuentas.BackgroundImage")));
-            this.panelCuentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panelCuentas.Location = new System.Drawing.Point(9, 103);
-            this.panelCuentas.Name = "panelCuentas";
-            this.panelCuentas.PageSize = 10;
-            this.panelCuentas.Size = new System.Drawing.Size(456, 532);
-            this.panelCuentas.TabIndex = 6;
-            // 
-            // panelVentas
-            // 
-            this.panelVentas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelVentas.AutoScroll = true;
-            this.panelVentas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelVentas.BackgroundImage")));
-            this.panelVentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panelVentas.Location = new System.Drawing.Point(9, 103);
-            this.panelVentas.Name = "panelVentas";
-            this.panelVentas.PageSize = 10;
-            this.panelVentas.Size = new System.Drawing.Size(907, 532);
-            this.panelVentas.TabIndex = 5;
             // 
             // FrmPantallaInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1446, 645);
+            this.ClientSize = new System.Drawing.Size(1080, 645);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
