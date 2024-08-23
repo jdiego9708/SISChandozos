@@ -49,6 +49,11 @@ namespace CapaPresentacion.Formularios.FormsPedido
 
         public DataTable TablaPago(bool isPrecuenta)
         {
+            bool result = this.ObtenerMetodosPago(out List<MetodoPagoModel> MetodosPago);
+
+            if (!result)
+                return null;
+
             DataTable table = new DataTable();
             table.Columns.Add("Metodo_pago", typeof(string));
             table.Columns.Add("Valor_pago", typeof(int));
@@ -57,8 +62,6 @@ namespace CapaPresentacion.Formularios.FormsPedido
 
             if (isPrecuenta)
                 return table;
-
-            bool result = this.ObtenerMetodosPago(out List<MetodoPagoModel> MetodosPago);
 
             if (result)
             {

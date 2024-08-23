@@ -195,10 +195,11 @@ namespace CapaPresentacion.Formularios.FormsPrincipales
             FrmPedido frmPedido = new FrmPedido()
             {
                 WindowState = FormWindowState.Maximized,
-                Pedido = pedido,
+                //Pedido = pedido,
             };
             frmPedido.OnBtnPedidoSuccess += FrmPedido_OnBtnPedidoSuccess;
-            frmPedido.ShowDialog();
+            frmPedido.Show();
+            frmPedido.Pedido = pedido;
         }
         private void DatosMesa_OnBtnCancelarPedidoClick(object sender, EventArgs e)
         {

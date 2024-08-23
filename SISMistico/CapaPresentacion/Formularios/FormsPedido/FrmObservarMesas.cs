@@ -274,17 +274,13 @@ namespace CapaPresentacion.Formularios.FormsPedido
             DatosInicioSesion datos = DatosInicioSesion.GetInstancia();
             FrmPedido FrmPedido = new FrmPedido
             {
-                //StartPosition = FormStartPosition.CenterScreen,
-                //Numero_mesa = pedido.Mesa.Num_mesa,
-                //Tipo_servicio = "MESA",
-                //EmpleadoSelected = datos.EmpleadoClaveMaestra,
-                //ClienteSelected = pedido.Cliente,
-                //MesaSelected = pedido.Mesa,
-                //WindowState = FormWindowState.Maximized,
+                StartPosition = FormStartPosition.CenterScreen,
+                WindowState = FormWindowState.Maximized,
                 //Pedido = pedido,
-                //IsEditar = true,
             };
-            FrmPedido.ShowDialog();
+            FrmPedido.Show();
+
+            FrmPedido.Pedido = pedido;
         }
 
         private void ButtonMesa_OnBtnCancelarPedidoClick(object sender, EventArgs e)

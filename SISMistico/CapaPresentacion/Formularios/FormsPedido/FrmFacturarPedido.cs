@@ -87,8 +87,11 @@ namespace CapaPresentacion.Formularios.FormsPedido
 
         private bool Comprobaciones(out Ventas venta, out DataTable detallePago)
         {
-            detallePago = this.opcionesPedido.TablaPago(this.IsPrecuenta);
             venta = null;
+            detallePago = this.opcionesPedido.TablaPago(this.IsPrecuenta);
+
+            if (detallePago == null)
+                return false;   
             try
             {
                 if (!decimal.TryParse(Convert.ToString(this.opcionesPedido.txtPropina.Tag), out decimal propina))
