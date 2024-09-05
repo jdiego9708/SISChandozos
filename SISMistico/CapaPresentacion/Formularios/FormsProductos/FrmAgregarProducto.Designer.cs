@@ -34,6 +34,7 @@
             this.gbNombre = new System.Windows.Forms.GroupBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.uploadImagen = new CapaPresentacion.Formularios.Controles.UploadImage();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -43,7 +44,7 @@
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.uploadImagen = new CapaPresentacion.Formularios.Controles.UploadImage();
+            this.btnRemove = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.gbNombre.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -99,6 +100,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Imagen";
             // 
+            // uploadImagen
+            // 
+            this.uploadImagen.BackColor = System.Drawing.Color.White;
+            this.uploadImagen.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uploadImagen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.uploadImagen.Imagen = null;
+            this.uploadImagen.Location = new System.Drawing.Point(108, 30);
+            this.uploadImagen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.uploadImagen.Name = "uploadImagen";
+            this.uploadImagen.Nombre_imagen = null;
+            this.uploadImagen.Numero_imagen = 0;
+            this.uploadImagen.Observaciones = null;
+            this.uploadImagen.Ruta_destino = null;
+            this.uploadImagen.Ruta_origen = null;
+            this.uploadImagen.Size = new System.Drawing.Size(342, 156);
+            this.uploadImagen.TabIndex = 1;
+            this.uploadImagen.Tipo_imagen = null;
+            // 
             // btnCancelar
             // 
             this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -110,10 +129,10 @@
             this.btnCancelar.ForeColor = System.Drawing.Color.Gray;
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.Location = new System.Drawing.Point(299, 557);
+            this.btnCancelar.Location = new System.Drawing.Point(401, 560);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(5);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(252, 69);
+            this.btnCancelar.Size = new System.Drawing.Size(153, 69);
             this.btnCancelar.TabIndex = 34;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -133,7 +152,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(14, 560);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(5);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(252, 66);
+            this.btnGuardar.Size = new System.Drawing.Size(159, 66);
             this.btnGuardar.TabIndex = 33;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -236,23 +255,25 @@
             this.txtDescripcion.TabIndex = 26;
             this.txtDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // uploadImagen
+            // btnRemove
             // 
-            this.uploadImagen.BackColor = System.Drawing.Color.White;
-            this.uploadImagen.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uploadImagen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.uploadImagen.Imagen = null;
-            this.uploadImagen.Location = new System.Drawing.Point(108, 30);
-            this.uploadImagen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.uploadImagen.Name = "uploadImagen";
-            this.uploadImagen.Nombre_imagen = null;
-            this.uploadImagen.Numero_imagen = 0;
-            this.uploadImagen.Observaciones = null;
-            this.uploadImagen.Ruta_destino = null;
-            this.uploadImagen.Ruta_origen = null;
-            this.uploadImagen.Size = new System.Drawing.Size(342, 156);
-            this.uploadImagen.TabIndex = 1;
-            this.uploadImagen.Tipo_imagen = null;
+            this.btnRemove.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRemove.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnRemove.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnRemove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemove.Font = new System.Drawing.Font("Segoe UI Emoji", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemove.ForeColor = System.Drawing.Color.Gray;
+            this.btnRemove.Image = ((System.Drawing.Image)(resources.GetObject("btnRemove.Image")));
+            this.btnRemove.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRemove.Location = new System.Drawing.Point(210, 560);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(5);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(159, 66);
+            this.btnRemove.TabIndex = 39;
+            this.btnRemove.Text = "Eliminar";
+            this.btnRemove.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRemove.UseVisualStyleBackColor = true;
             // 
             // FrmAgregarProducto
             // 
@@ -260,6 +281,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(568, 640);
+            this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.gbNombre);
@@ -304,5 +326,6 @@
         private Controles.UploadImage uploadImagen;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.ComboBox listaTipoProductos;
+        private System.Windows.Forms.Button btnRemove;
     }
 }

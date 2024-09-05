@@ -653,5 +653,148 @@ namespace CapaDatos
             return Task.FromResult(rpta);
         }
         #endregion
+
+        #region METODO DELETE DETAIL PRODUCT
+        public Task<string> DeleteDetailProduct(Detail_products detail)
+        {
+            string rpta = string.Empty;
+            SqlConnection SqlCon = new SqlConnection(Conexion.Cn);
+            try
+            {
+                SqlCon.InfoMessage += new SqlInfoMessageEventHandler(SqlCon_InfoMessage);
+                SqlCon.FireInfoMessageEventOnUserErrors = true;
+                SqlCon.Open();
+
+                SqlCommand SqlCmd = new SqlCommand()
+                {
+                    Connection = SqlCon,
+                    CommandText = "sp_Detail_products_d",
+                    CommandType = CommandType.StoredProcedure
+                };
+
+                SqlParameter Id_detail_product = new SqlParameter()
+                {
+                    ParameterName = "@Id_detail_product",
+                    SqlDbType = SqlDbType.Int,
+                    Value = detail.Id_detail_product,
+                };
+                SqlCmd.Parameters.Add(Id_detail_product);
+
+                SqlCmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                rpta = ex.Message;
+            }
+            catch (Exception ex)
+            {
+                rpta = ex.Message;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open)
+                    SqlCon.Close();
+            }
+            return Task.FromResult(rpta);
+        }
+        #endregion
+
+        #region METODO UPDATE AMOUNT DETAIL PRODUCT
+        public Task<string> UpdateAmountDetailProduct(Detail_products detail)
+        {
+            string rpta = "OK";
+            SqlConnection SqlCon = new SqlConnection(Conexion.Cn);
+            try
+            {
+                SqlCon.InfoMessage += new SqlInfoMessageEventHandler(SqlCon_InfoMessage);
+                SqlCon.FireInfoMessageEventOnUserErrors = true;
+                SqlCon.Open();
+
+                SqlCommand SqlCmd = new SqlCommand()
+                {
+                    Connection = SqlCon,
+                    CommandText = "sp_Detail_products_u_Amount",
+                    CommandType = CommandType.StoredProcedure
+                };
+
+                SqlParameter Id_detail_product = new SqlParameter()
+                {
+                    ParameterName = "@Id_detail_product",
+                    SqlDbType = SqlDbType.Int,
+                    Value = detail.Id_detail_product,
+                };
+                SqlCmd.Parameters.Add(Id_detail_product);
+
+                SqlParameter Amount_product = new SqlParameter()
+                {
+                    ParameterName = "@Amount",
+                    SqlDbType = SqlDbType.Decimal,
+                    Value = detail.Amount_product,
+                };
+                SqlCmd.Parameters.Add(Amount_product);
+
+                SqlCmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                rpta = ex.Message;
+            }
+            catch (Exception ex)
+            {
+                rpta = ex.Message;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open)
+                    SqlCon.Close();
+            }
+            return Task.FromResult(rpta);
+        }
+        #endregion
+
+        #region METODO DELETE PRODUCT
+        public Task<string> DeleteProduct(Productos product)
+        {
+            string rpta = "OK";
+            SqlConnection SqlCon = new SqlConnection(Conexion.Cn);
+            try
+            {
+                SqlCon.InfoMessage += new SqlInfoMessageEventHandler(SqlCon_InfoMessage);
+                SqlCon.FireInfoMessageEventOnUserErrors = true;
+                SqlCon.Open();
+
+                SqlCommand SqlCmd = new SqlCommand()
+                {
+                    Connection = SqlCon,
+                    CommandText = "sp_Products_d",
+                    CommandType = CommandType.StoredProcedure
+                };
+
+                SqlParameter Id_product = new SqlParameter()
+                {
+                    ParameterName = "@Id_product",
+                    SqlDbType = SqlDbType.Int,
+                    Value = product.Id_producto,
+                };
+                SqlCmd.Parameters.Add(Id_product);
+
+                SqlCmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                rpta = ex.Message;
+            }
+            catch (Exception ex)
+            {
+                rpta = ex.Message;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open)
+                    SqlCon.Close();
+            }
+            return Task.FromResult(rpta);
+        }
+        #endregion
     }
 }

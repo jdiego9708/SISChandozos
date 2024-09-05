@@ -10,6 +10,12 @@ namespace CapaPresentacion.Formularios.FormsGroupsProducts
         {
             InitializeComponent();
             this.btnDelete.Click += BtnDelete_Click;
+            this.btnEditCantidad.Click += BtnEditCantidad_Click;
+        }
+
+        private void BtnEditCantidad_Click(object sender, EventArgs e)
+        {
+            this.OnBtnEditClick?.Invoke(this.DetailProduct, e);
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
@@ -35,5 +41,6 @@ namespace CapaPresentacion.Formularios.FormsGroupsProducts
         }
 
         public event EventHandler OnBtnRemoveClick;
+        public event EventHandler OnBtnEditClick;
     }
 }

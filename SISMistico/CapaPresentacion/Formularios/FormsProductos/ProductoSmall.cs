@@ -48,6 +48,7 @@ namespace CapaPresentacion.Formularios.FormsProductos
         private void AsignarDatos(Productos producto)
         {
             this.txtNombre.Text = producto.Nombre_producto;
+            this.txtInformacion.Text = "ID: " + producto.Id_producto;
             //this.txtTipo.Text = producto.Tipo_producto.Nombre_tipo;
 
             this.pxImagen.Image = Imagenes.ObtenerImagen("RUTAIMAGES", 

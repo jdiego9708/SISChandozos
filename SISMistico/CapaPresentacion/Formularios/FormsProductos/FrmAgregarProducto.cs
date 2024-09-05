@@ -14,8 +14,20 @@ namespace CapaPresentacion.Formularios.FormsProductos
 
             this.btnGuardar.Click += BtnSave_Click;
             this.btnCancelar.Click += BtnCancelar_Click;
+            this.btnRemove.Click += BtnRemove_Click;
             this.Load += FrmAddProduct_Load;
             this.listaTipoProductos.SelectedIndexChanged += ListaTipoProductos_SelectedIndexChanged;
+        }
+
+        private async void BtnRemove_Click(object sender, EventArgs e)
+        {
+            var result = await NProductos.DeleteProduct(this.Producto);
+
+            if (result.Equals("OK"))
+            {
+                this.OnProductSuccess?.Invoke(this.Producto, e);
+                this.Close();
+            }
         }
 
         private void BtnCancelar_Click(object sender, EventArgs e)
@@ -86,7 +98,7 @@ namespace CapaPresentacion.Formularios.FormsProductos
             product.Estado_producto = "ACTIVO";
             product.Imagen_producto = imagen;
 
-            return true;        
+            return true;
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
@@ -162,7 +174,7 @@ namespace CapaPresentacion.Formularios.FormsProductos
             {
                 _product = value;
                 this.IsEditar = true;
-                this.AsignarDatos(value);            
+                this.AsignarDatos(value);
             }
         }
 

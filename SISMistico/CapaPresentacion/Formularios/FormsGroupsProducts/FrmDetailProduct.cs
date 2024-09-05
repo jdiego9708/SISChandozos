@@ -30,6 +30,18 @@ namespace CapaPresentacion.Formularios.FormsGroupsProducts
         public event EventHandler OnBtnSaveClick;
 
         private Productos _productSelected;
+        private Detail_products _detail_products;
+
+        public Detail_products Detail_products
+        {
+            get => _detail_products;
+            set
+            {
+                _detail_products = value;
+
+                this.numericAmount.Value = value.Amount_product;
+            }
+        }
 
         public Productos ProductSelected 
         {

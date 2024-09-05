@@ -1,5 +1,6 @@
 ﻿
 using CapaPresentacion.Servicios.Mensajes;
+using System.ComponentModel;
 using System.Windows.Forms;
 
 namespace CapaPresentacion
@@ -41,11 +42,22 @@ namespace CapaPresentacion
 
         public static void MensajeInformacion(string mensaje, string texto_boton = "Entendido")
         {
-            FrmMensajeInformacion FrmMensajeInformacion = new FrmMensajeInformacion();
-            FrmMensajeInformacion.StartPosition = FormStartPosition.CenterScreen;
-            FrmMensajeInformacion.Mensaje = mensaje;
-            FrmMensajeInformacion.Texto_boton = texto_boton;
-            FrmMensajeInformacion.ShowDialog();
+            try
+            {
+                FrmMensajeInformacion FrmMensajeInformacion = new FrmMensajeInformacion();
+                FrmMensajeInformacion.StartPosition = FormStartPosition.CenterScreen;
+                FrmMensajeInformacion.Mensaje = mensaje;
+                FrmMensajeInformacion.Texto_boton = texto_boton;
+                FrmMensajeInformacion.ShowDialog();
+            }
+            catch(Win32Exception)
+            {
+
+            }
+            catch (System.Exception)
+            {
+
+            }          
         }
 
 

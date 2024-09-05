@@ -117,6 +117,7 @@ namespace CapaPresentacion.Formularios.FormsGroupsProducts
                         ProductSelected = producto,
                     };
                     productoSmall.OnBtnNextClick += ProductoSmall_OnBtnNextClick;
+
                     controls.Add(productoSmall);
                 }
 
@@ -135,19 +136,7 @@ namespace CapaPresentacion.Formularios.FormsGroupsProducts
                     "Hubo un error con la tabla de datos", ex.Message);
             }
         }
-        private void ProductoSmall_OnBtnEditarClick(object sender, EventArgs e)
-        {
-            Productos producto = (Productos)sender;
 
-            FrmAgregarProducto frmEditarProducto = new FrmAgregarProducto()
-            {
-                StartPosition = FormStartPosition.CenterScreen,
-                MinimizeBox = false,
-                MaximizeBox = false,
-                Producto = producto,
-            };
-            frmEditarProducto.ShowDialog();
-        }
         private void ProductoSmall_OnBtnNextClick(object sender, EventArgs e)
         {
             Productos producto = (Productos)sender;
@@ -283,8 +272,6 @@ namespace CapaPresentacion.Formularios.FormsGroupsProducts
             this.panelProductos.clearDataSource();
             this.panelProductos.AddArrayControl(userSControls);
         }
-
-
         public List<FormsProductos.ProductoSuperSmall> ControlsCustom { get; set; }
         public List<Productos> Products { get; set; }
         public List<Detail_products> DetailProductsAdd { get; set; }

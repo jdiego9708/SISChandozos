@@ -24,6 +24,7 @@ namespace CapaPresentacion.Formularios.FormsProductos
             this.btnAddStock.Click += BtnAddStock_Click;
         }
 
+        private PoperContainer container;
         private void BtnAddStock_Click(object sender, EventArgs e)
         {
             FrmAddStockProduct frmAddStockProduct = new FrmAddStockProduct
@@ -38,13 +39,15 @@ namespace CapaPresentacion.Formularios.FormsProductos
 
             frmAddStockProduct.OnProductSaveSuccess += FrmAddStockProduct_OnProductSaveSuccess;
 
-            PoperContainer container = new PoperContainer(frmAddStockProduct);
+            container = new PoperContainer(frmAddStockProduct);
             container.Show(this.btnAddStock);
 
             frmAddStockProduct.Show();
         }
         private async void FrmAddStockProduct_OnProductSaveSuccess(object sender, EventArgs e)
         {
+            this.container.Close();
+
             await this.LoadStockProduct(this.Producto.Id_producto);
         }
         private async Task LoadStockProduct(int id_product)
@@ -127,8 +130,9 @@ namespace CapaPresentacion.Formularios.FormsProductos
                             {
                                 DetailProduct = de,
                             };
+                            prSmall.OnBtnRemoveClick += PrSmall_OnBtnRemoveClick;
+                            prSmall.OnBtnEditClick += PrSmall_OnBtnEditClick;
 
-                            prSmall.btnDelete.Visible = false;
 
                             usersControls.Add(prSmall);
                         }
@@ -144,9 +148,40 @@ namespace CapaPresentacion.Formularios.FormsProductos
                         }
 
                         this.panelDetails.AddArrayControl(usersControls);
-                    }              
+                    }
                 }
             }
+        }
+
+        private void PrSmall_OnBtnEditClick(object sender, EventArgs e)
+        {
+            Detail_products detail = (Detail_products)sender;
+
+            FrmDetailProduct frmDetailProduct = new FrmDetailProduct()
+            {
+                Detail_products = detail,
+                StartPosition = FormStartPosition.CenterScreen,
+            };
+            frmDetailProduct.OnBtnSaveClick += FrmDetailProduct_OnBtnSaveClick;
+            frmDetailProduct.ShowDialog();
+        }
+
+        private void FrmDetailProduct_OnBtnSaveClick(object sender, EventArgs e)
+        {
+            FrmDetailProduct frmDetailProduct = (FrmDetailProduct)sender;
+            Detail_products detail = frmDetailProduct.Detail_products;
+            detail.Amount_product = frmDetailProduct.numericAmount.Value;
+
+            NProductos.UpdateAmountDetailProduct(detail);
+        }
+
+        private void PrSmall_OnBtnRemoveClick(object sender, EventArgs e)
+        {
+            Detail_products detail = (Detail_products)sender;
+
+            NProductos.RemoveDetailProduct(detail);
+
+
         }
 
         public List<Productos> Products { get; set; }

@@ -22,128 +22,161 @@ namespace CapaPresentacion.Formularios.FormsProductos
             this.Load += FrmObservarProductos_Load;
             this.btnAddProduct.Click += BtnAddProduct_Click;
             this.btnRefresh.Click += BtnRefresh_Click;
+            this.txtBusqueda.KeyPress += TxtBusqueda_KeyPress;
 
             this.btnProductsInventory.Click += BtnProductsInventory_Click;
             this.btnProductsBuys.Click += BtnProductsBuys_Click;
         }
 
+        private void BuscarProductosByName(string name)
+        {
+            List<ProductoSmall> findControls = this.ControlsCustom.Where(x => x.Producto.Nombre_producto.ToLower().Trim().StartsWith(name.ToLower().Trim()) || 
+            x.Producto.Nombre_producto.ToLower().Trim().Contains(name.ToLower().Trim())).ToList();
+
+            if (findControls.Count < 1)
+                return;
+
+            List<UserControl> usersControlsFind = findControls.Cast<UserControl>().ToList();
+
+            this.panelProductos.clearDataSource();
+            this.panelProductos.AddArrayControl(usersControlsFind);
+        }
+        private void TxtBusqueda_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                this.gbResultados.Text = $"Mostrando productos | {TypeProducts}";
+
+                this.LoadCategorias("CATALOGO PADRE", "TIPOS DE PRODUCTOS");
+
+                this.BuscarProductos($"ALL PRODUCTS {TypeProducts} NAME", this.txtBusqueda.Text.Trim().ToLower());
+
+                e.Handled = true;
+            }
+        }
         private void BtnProductsBuys_Click(object sender, EventArgs e)
         {
-            this.gbResultados.Text = $"Mostrando productos para VENTA";
-
             this.TypeProducts = "DETAILS";
 
-            //this.BuscarProductos($"ALL PRODUCTS", "");
-
-            if (this.Products == null)
-            {
-                Mensajes.MensajeInformacion("No hay productos para filtrar");
-                return;
-            }
-
-            if (this.Products.Count < 1)
-            {
-                Mensajes.MensajeInformacion("No hay productos para filtrar");
-                return;
-            }
-
-            List<ProductoSmall> controlsCustom = this.ControlsCustom.Where(x => x.Producto.Detail_products.Count > 0).ToList();
+            this.gbResultados.Text = $"Mostrando productos para VENTA";
 
             this.LoadCategorias("CATALOGO PADRE", "TIPOS DE PRODUCTOS");
 
-            if (controlsCustom == null)
-                return;
+            this.BuscarProductos($"ALL PRODUCTS {TypeProducts} ID TYPE", TipoProductoSelected.Id_tipo.ToString());
 
-            if (controlsCustom.Count < 1)
-                return;
+            //if (this.Products == null)
+            //{
+            //    Mensajes.MensajeInformacion("No hay productos para filtrar");
+            //    return;
+            //}
 
-            List<UserControl> usersControl = new List<UserControl>();
+            //if (this.Products.Count < 1)
+            //{
+            //    Mensajes.MensajeInformacion("No hay productos para filtrar");
+            //    return;
+            //}
 
-            foreach (ProductoSmall small in controlsCustom)
-            {
-                if (small.Producto.Detail_products == null)
-                {
-                    small.btnAddDetailProduct.Visible = true;
-                    usersControl.Add(small);
-                    continue;
-                }
+            //List<ProductoSmall> controlsCustom = this.ControlsCustom.Where(x => x.Producto.Detail_products.Count > 0).ToList();
 
-                if (small.Producto.Detail_products.Count < 1)
-                {
-                    small.btnAddDetailProduct.Visible = true;
-                    usersControl.Add(small);
-                    continue;
-                }
+            //this.LoadCategorias("CATALOGO PADRE", "TIPOS DE PRODUCTOS");
 
-                small.btnAddDetailProduct.Visible = false;
-                usersControl.Add(small);
-            }
+            //if (controlsCustom == null)
+            //    return;
 
-            this.panelProductos.clearDataSource();
-            this.panelProductos.AddArrayControl(usersControl);
+            //if (controlsCustom.Count < 1)
+            //    return;
+
+            //List<UserControl> usersControl = new List<UserControl>();
+
+            //foreach (ProductoSmall small in controlsCustom)
+            //{
+            //    if (small.Producto.Detail_products == null)
+            //    {
+            //        small.btnAddDetailProduct.Visible = true;
+            //        usersControl.Add(small);
+            //        continue;
+            //    }
+
+            //    if (small.Producto.Detail_products.Count < 1)
+            //    {
+            //        small.btnAddDetailProduct.Visible = true;
+            //        usersControl.Add(small);
+            //        continue;
+            //    }
+
+            //    small.btnAddDetailProduct.Visible = false;
+            //    usersControl.Add(small);
+            //}
+
+            //this.panelProductos.clearDataSource();
+            //this.panelProductos.AddArrayControl(usersControl);
 
         }
         private void BtnProductsInventory_Click(object sender, EventArgs e)
         {
-            this.gbResultados.Text = $"Mostrando productos del INVENTARIO";
-
             this.TypeProducts = "INVENTORY";
 
-            //this.BuscarProductos($"ALL PRODUCTS", "");
-
-            if (this.Products == null)
-            {
-                Mensajes.MensajeInformacion("No hay productos para filtrar");
-                return;
-            }
-
-            if (this.Products.Count < 1)
-            {
-                Mensajes.MensajeInformacion("No hay productos para filtrar");
-                return;
-            }
-
-            List<ProductoSmall> controlsCustom = this.ControlsCustom.Where(x => x.Producto.Detail_products == null ||
-            x.Producto.Detail_products.Count < 1).ToList();
+            this.gbResultados.Text = $"Mostrando productos de INVENTARIO";
 
             this.LoadCategorias("CATALOGO PADRE", "TIPOS DE PRODUCTOS");
 
-            if (controlsCustom == null)
-                return;
+            this.BuscarProductos($"ALL PRODUCTS {TypeProducts} ID TYPE", TipoProductoSelected.Id_tipo.ToString());
 
-            if (controlsCustom.Count < 1)
-                return;
+            //if (this.Products == null)
+            //{
+            //    Mensajes.MensajeInformacion("No hay productos para filtrar");
+            //    return;
+            //}
 
-            List<UserControl> usersControl = new List<UserControl>();
+            //if (this.Products.Count < 1)
+            //{
+            //    Mensajes.MensajeInformacion("No hay productos para filtrar");
+            //    return;
+            //}
 
-            foreach (ProductoSmall small in controlsCustom)
-            {
-                if (small.Producto.Detail_products == null)
-                {
-                    small.btnAddDetailProduct.Visible = true;
-                    usersControl.Add(small);
-                    continue;
-                }
+            //List<ProductoSmall> controlsCustom = this.ControlsCustom.Where(x => x.Producto.Detail_products == null ||
+            //x.Producto.Detail_products.Count < 1).ToList();
 
-                if (small.Producto.Detail_products.Count < 1)
-                {
-                    small.btnAddDetailProduct.Visible = true;
-                    usersControl.Add(small);
-                    continue;
-                }
+            //this.LoadCategorias("CATALOGO PADRE", "TIPOS DE PRODUCTOS");
 
-                small.btnAddDetailProduct.Visible = true;
-                usersControl.Add(small);
-            }
+            //if (controlsCustom == null)
+            //    return;
 
-            this.panelProductos.clearDataSource();
-            this.panelProductos.AddArrayControl(usersControl);
+            //if (controlsCustom.Count < 1)
+            //    return;
+
+            //List<UserControl> usersControl = new List<UserControl>();
+
+            //foreach (ProductoSmall small in controlsCustom)
+            //{
+            //    if (small.Producto.Detail_products == null)
+            //    {
+            //        small.btnAddDetailProduct.Visible = true;
+            //        usersControl.Add(small);
+            //        continue;
+            //    }
+
+            //    if (small.Producto.Detail_products.Count < 1)
+            //    {
+            //        small.btnAddDetailProduct.Visible = true;
+            //        usersControl.Add(small);
+            //        continue;
+            //    }
+
+            //    small.btnAddDetailProduct.Visible = true;
+            //    usersControl.Add(small);
+            //}
+
+            //this.panelProductos.clearDataSource();
+            //this.panelProductos.AddArrayControl(usersControl);
         }
         private void BtnRefresh_Click(object sender, EventArgs e)
         {
-            this.BuscarProductos($"ALL PRODUCTS", "");
+            this.gbResultados.Text = $"Mostrando productos del {TypeProducts}";
 
             this.LoadCategorias("CATALOGO PADRE", "TIPOS DE PRODUCTOS");
+
+            this.BuscarProductos($"ALL PRODUCTS {TypeProducts} ID TYPE", TipoProductoSelected.Id_tipo.ToString());
 
             if (this.ControlsCustom == null)
                 return;
@@ -169,9 +202,11 @@ namespace CapaPresentacion.Formularios.FormsProductos
         }
         private void FrmAgregarProducto_OnProductSuccess(object sender, EventArgs e)
         {
-            this.BuscarProductos($"ALL PRODUCTS", "");
+            this.gbResultados.Text = $"Mostrando productos del {TypeProducts}";
 
             this.LoadCategorias("CATALOGO PADRE", "TIPOS DE PRODUCTOS");
+
+            this.BuscarProductos($"ALL PRODUCTS {TypeProducts} ID TYPE", TipoProductoSelected.Id_tipo.ToString());
 
             if (this.ControlsCustom == null)
                 return;
@@ -188,51 +223,51 @@ namespace CapaPresentacion.Formularios.FormsProductos
         {
             this.TypeProducts = "INVENTORY";
 
-            this.gbResultados.Text = $"Mostrando productos del INVENTARIO";
-
-            this.BuscarProductos($"ALL PRODUCTS", "");
+            this.gbResultados.Text = $"Mostrando productos del {TypeProducts}";
 
             this.LoadCategorias("CATALOGO PADRE", "TIPOS DE PRODUCTOS");
 
-            if (this.Products == null)
-            {
-                Mensajes.MensajeInformacion("No hay productos para filtrar");
-                return;
-            }
+            this.BuscarProductos($"ALL PRODUCTS {TypeProducts} ID TYPE", TipoProductoSelected.Id_tipo.ToString());
 
-            if (this.Products.Count < 1)
-            {
-                Mensajes.MensajeInformacion("No hay productos para filtrar");
-                return;
-            }
+            //if (this.Products == null)
+            //{
+            //    Mensajes.MensajeInformacion("No hay productos para filtrar");
+            //    return;
+            //}
 
-            List<ProductoSmall> controlsCustom = this.ControlsCustom.Where(x => x.Producto.Detail_products == null ||
-            x.Producto.Detail_products.Count < 1).ToList();
+            //if (this.Products.Count < 1)
+            //{
+            //    Mensajes.MensajeInformacion("No hay productos para filtrar");
+            //    return;
+            //}
 
-            List<UserControl> usersControl = new List<UserControl>();
+            //List<ProductoSmall> controlsCustom = this.ControlsCustom.Where(x => x.Producto.Detail_products == null ||
+            //x.Producto.Detail_products.Count < 1).ToList();
 
-            foreach (ProductoSmall small in controlsCustom)
-            {
-                if (small.Producto.Detail_products == null)
-                {
-                    small.btnAddDetailProduct.Visible = true;
-                    usersControl.Add(small);
-                    continue;
-                }
+            //List<UserControl> usersControl = new List<UserControl>();
 
-                if (small.Producto.Detail_products.Count < 1)
-                {
-                    small.btnAddDetailProduct.Visible = true;
-                    usersControl.Add(small);
-                    continue;
-                }
+            //foreach (ProductoSmall small in controlsCustom)
+            //{
+            //    if (small.Producto.Detail_products == null)
+            //    {
+            //        small.btnAddDetailProduct.Visible = true;
+            //        usersControl.Add(small);
+            //        continue;
+            //    }
 
-                small.btnAddDetailProduct.Visible = true;
-                usersControl.Add(small);
-            }
+            //    if (small.Producto.Detail_products.Count < 1)
+            //    {
+            //        small.btnAddDetailProduct.Visible = true;
+            //        usersControl.Add(small);
+            //        continue;
+            //    }
 
-            this.panelProductos.clearDataSource();
-            this.panelProductos.AddArrayControl(usersControl);
+            //    small.btnAddDetailProduct.Visible = true;
+            //    usersControl.Add(small);
+            //}
+
+            //this.panelProductos.clearDataSource();
+            //this.panelProductos.AddArrayControl(usersControl);
         }
         private void BuscarProductos(string tipo_busqueda, string texto_busqueda)
         {
@@ -343,6 +378,11 @@ namespace CapaPresentacion.Formularios.FormsProductos
                         Producto = producto,
                     };
 
+                    if (producto.Detail_products.Count > 0)
+                        productoSmall.btnAddDetailProduct.Visible = false;
+                    else
+                        productoSmall.btnAddDetailProduct.Visible = true;
+
                     productoSmall.OnBtnNextClick += ProductoSmall_OnBtnNextClick;
                     productoSmall.OnBtnEditarClick += ProductoSmall_OnBtnEditarClick;
                     productoSmall.OnBtnAddGroupClick += ProductoSmall_OnBtnAddGroupClick;
@@ -363,7 +403,7 @@ namespace CapaPresentacion.Formularios.FormsProductos
                 this.ProductsInventory = productsInventoryView;
 
                 this.panelProductos.BackgroundImage = null;
-                //this.panelProductos.AddArrayControl(controls);
+                this.panelProductos.AddArrayControl(controls);
             }
             catch (Exception ex)
             {
@@ -388,7 +428,7 @@ namespace CapaPresentacion.Formularios.FormsProductos
         }
         private void FrmAddGroupProduct_OnSaveGroupSuccess(object sender, EventArgs e)
         {
-            this.BuscarProductos($"ALL PRODUCTS", "");
+            this.BuscarProductos($"ALL PRODUCTS {TypeProducts} ID TYPE", TipoProductoSelected.Id_tipo.ToString());
         }
         private void ProductoSmall_OnBtnEditarClick(object sender, EventArgs e)
         {
@@ -409,12 +449,19 @@ namespace CapaPresentacion.Formularios.FormsProductos
 
             if (this.OnBtnProductSelected == null)
             {
+                var result = NProductos.BuscarProductos("ALL PRODUCTS", "");
+
+                DataTable dtProductos = result.Result.dt;
+
+                List<Productos> productosList = (from DataRow row in dtProductos.Rows
+                                                 select new Productos(row)).ToList();
+
                 FrmProfileProduct frmProfileProduct = new FrmProfileProduct()
                 {
                     StartPosition = FormStartPosition.CenterScreen,
                     MinimizeBox = false,
                     MaximizeBox = false,
-                    Products = this.Products
+                    Products = productosList
                 };
                 frmProfileProduct.Producto = producto;
                 frmProfileProduct.ShowDialog();
@@ -453,6 +500,9 @@ namespace CapaPresentacion.Formularios.FormsProductos
                         this.Categorias.Add(ca);
                     }
                     this.panelTiposProductos.AddArrayControl(controls);
+
+                    if (TipoProductoSelected == null)
+                        TipoProductoSelected = new Catalogo(dtCategorias.Rows[0]);
                 }
             }
             catch (Exception ex)
@@ -469,29 +519,33 @@ namespace CapaPresentacion.Formularios.FormsProductos
 
             TipoProductoSelected = catalogo;
 
-            if (this.Products == null || this.Products.Count < 1)
-            {
-                this.BuscarProductos($"ALL PRODUCTS", "");
-            }
+            this.LoadCategorias("CATALOGO PADRE", "TIPOS DE PRODUCTOS");
 
-            List<ProductoSmall> controlsCustom = new List<ProductoSmall>();
+            this.BuscarProductos($"ALL PRODUCTS {TypeProducts} ID TYPE", TipoProductoSelected.Id_tipo.ToString());
 
-            if (this.TypeProducts.Equals("INVENTORY"))
-            {
-                controlsCustom = this.ControlsCustom.Where(x => x.Producto.Detail_products == null ||
-                x.Producto.Detail_products.Count < 1).ToList();
-            }
-            else
-            {
-                controlsCustom = this.ControlsCustom.Where(x => x.Producto.Detail_products.Count > 0).ToList();
-            }
+            //if (this.Products == null || this.Products.Count < 1)
+            //{
+            //    this.BuscarProductos($"ALL PRODUCTS {TypeProducts} ID TYPE", "");
+            //}
+
+            //List<ProductoSmall> controlsCustom = new List<ProductoSmall>();
+
+            //if (this.TypeProducts.Equals("INVENTORY"))
+            //{
+            //    controlsCustom = this.ControlsCustom.Where(x => x.Producto.Detail_products == null ||
+            //    x.Producto.Detail_products.Count < 1).ToList();
+            //}
+            //else
+            //{
+            //    controlsCustom = this.ControlsCustom.Where(x => x.Producto.Detail_products.Count > 0).ToList();
+            //}
           
-            var findUsersControls = controlsCustom.Where(x => x.Producto.Id_tipo_producto == catalogo.Id_tipo).ToList();
+            //var findUsersControls = controlsCustom.Where(x => x.Producto.Id_tipo_producto == catalogo.Id_tipo).ToList();
 
-            List<UserControl> userSControls = findUsersControls.Cast<UserControl>().ToList();
+            //List<UserControl> userSControls = findUsersControls.Cast<UserControl>().ToList();
 
-            this.panelProductos.clearDataSource();
-            this.panelProductos.AddArrayControl(userSControls);
+            //this.panelProductos.clearDataSource();
+            //this.panelProductos.AddArrayControl(userSControls);
         }
         public string TypeProducts { get; set; }
         public Catalogo TipoProductoSelected { get; set; }

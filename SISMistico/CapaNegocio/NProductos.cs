@@ -42,5 +42,20 @@ namespace CapaNegocio
             DProductos DProductos = new DProductos();
             return DProductos.InsertDetailProduct(detail);
         }
+        public static Task<string> RemoveDetailProduct(Detail_products detail)
+        {
+            DProductos DProductos = new DProductos();
+            return DProductos.DeleteDetailProduct(detail);
+        }
+        public static Task<string> UpdateAmountDetailProduct(Detail_products detail)
+        {
+            DProductos DProductos = new DProductos();
+            return DProductos.UpdateAmountDetailProduct(detail);
+        }
+        public static Task<string> DeleteProduct(Productos product)
+        {
+            DProductos DProductos = new DProductos();
+            return DProductos.DeleteProduct(product);
+        }
     }
 }

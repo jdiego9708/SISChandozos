@@ -32,6 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtInfo = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnEditCantidad = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panel1
@@ -71,17 +72,35 @@
             this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(265, 37);
+            this.btnDelete.Location = new System.Drawing.Point(266, 17);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(40, 40);
             this.btnDelete.TabIndex = 43;
             this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // btnEditCantidad
+            // 
+            this.btnEditCantidad.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEditCantidad.BackgroundImage")));
+            this.btnEditCantidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEditCantidad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEditCantidad.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnEditCantidad.FlatAppearance.BorderSize = 0;
+            this.btnEditCantidad.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.btnEditCantidad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnEditCantidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditCantidad.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditCantidad.Location = new System.Drawing.Point(266, 61);
+            this.btnEditCantidad.Name = "btnEditCantidad";
+            this.btnEditCantidad.Size = new System.Drawing.Size(40, 40);
+            this.btnEditCantidad.TabIndex = 44;
+            this.btnEditCantidad.UseVisualStyleBackColor = true;
             // 
             // ProductInventoryAddSmall
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 26F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnEditCantidad);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.txtInfo);
             this.Controls.Add(this.panel1);
@@ -100,5 +119,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtInfo;
         public System.Windows.Forms.Button btnDelete;
+        public System.Windows.Forms.Button btnEditCantidad;
     }
 }

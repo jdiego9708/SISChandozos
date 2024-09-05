@@ -17,11 +17,11 @@ namespace CapaPresentacion.Formularios.FormsProductos
         {
             try
             {
-                if (this.numericUpDown1.Value == 0)
-                {
-                    Mensajes.MensajeInformacion("La cantidad del Stock no puede ser 0");
-                    return;
-                }
+                //if (this.numericUpDown1.Value == 0)
+                //{
+                //    Mensajes.MensajeInformacion("La cantidad del Stock no puede ser 0");
+                //    return;
+                //}
 
                 string type_medition = string.Empty;
 
@@ -54,7 +54,7 @@ namespace CapaPresentacion.Formularios.FormsProductos
                 if (!rpta.Equals("OK"))
                     throw new Exception(rpta);
 
-                Mensajes.MensajeOkForm("Stock del producto actualizado con éxito");
+                //Mensajes.MensajeOkForm("Stock del producto actualizado con éxito");
 
                 this.OnProductSaveSuccess?.Invoke(stock, e);
 

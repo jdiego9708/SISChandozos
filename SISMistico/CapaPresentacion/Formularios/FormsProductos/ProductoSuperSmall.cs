@@ -9,7 +9,7 @@ namespace CapaPresentacion.Formularios.FormsProductos
         public ProductoSuperSmall()
         {
             InitializeComponent();
-            this.btnNext.Click += BtnNext_Click;
+            this.btnNext.Click += BtnNext_Click;  
         }
 
         private void BtnNext_Click(object sender, EventArgs e)

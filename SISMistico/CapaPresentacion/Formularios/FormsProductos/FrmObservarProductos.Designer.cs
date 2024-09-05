@@ -55,9 +55,10 @@
             this.groupBox1.Controls.Add(this.btnClose);
             this.groupBox1.Controls.Add(this.txtBusqueda);
             this.groupBox1.Controls.Add(this.btnAddProduct);
-            this.groupBox1.Location = new System.Drawing.Point(491, -3);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Emoji", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(418, -3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(659, 101);
+            this.groupBox1.Size = new System.Drawing.Size(732, 78);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Búsqueda de productos";
@@ -73,9 +74,9 @@
             this.btnRefresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(67, 34);
+            this.btnRefresh.Location = new System.Drawing.Point(47, 34);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(55, 55);
+            this.btnRefresh.Size = new System.Drawing.Size(35, 35);
             this.btnRefresh.TabIndex = 33;
             this.btnRefresh.UseVisualStyleBackColor = true;
             // 
@@ -91,7 +92,7 @@
             this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(627, 18);
+            this.btnClose.Location = new System.Drawing.Point(700, 18);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(28, 30);
             this.btnClose.TabIndex = 31;
@@ -102,9 +103,9 @@
             this.txtBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBusqueda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
-            this.txtBusqueda.Location = new System.Drawing.Point(128, 46);
+            this.txtBusqueda.Location = new System.Drawing.Point(88, 37);
             this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(472, 35);
+            this.txtBusqueda.Size = new System.Drawing.Size(545, 32);
             this.txtBusqueda.TabIndex = 2;
             this.txtBusqueda.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -121,7 +122,7 @@
             this.btnAddProduct.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddProduct.Location = new System.Drawing.Point(6, 34);
             this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(55, 55);
+            this.btnAddProduct.Size = new System.Drawing.Size(35, 35);
             this.btnAddProduct.TabIndex = 30;
             this.btnAddProduct.UseVisualStyleBackColor = true;
             // 
@@ -158,7 +159,7 @@
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox4.Controls.Add(this.panelTiposProductos);
-            this.groupBox4.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Font = new System.Drawing.Font("Segoe UI Emoji", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(6, 99);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(219, 525);
@@ -183,9 +184,10 @@
             // 
             this.gbTiposProductos.Controls.Add(this.btnProductsBuys);
             this.gbTiposProductos.Controls.Add(this.btnProductsInventory);
+            this.gbTiposProductos.Font = new System.Drawing.Font("Segoe UI Emoji", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbTiposProductos.Location = new System.Drawing.Point(7, -3);
             this.gbTiposProductos.Name = "gbTiposProductos";
-            this.gbTiposProductos.Size = new System.Drawing.Size(478, 101);
+            this.gbTiposProductos.Size = new System.Drawing.Size(405, 78);
             this.gbTiposProductos.TabIndex = 34;
             this.gbTiposProductos.TabStop = false;
             this.gbTiposProductos.Text = "Tipos de productos";
@@ -198,14 +200,14 @@
             this.btnProductsBuys.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnProductsBuys.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnProductsBuys.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProductsBuys.Font = new System.Drawing.Font("Segoe UI Emoji", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductsBuys.Font = new System.Drawing.Font("Segoe UI Emoji", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProductsBuys.ForeColor = System.Drawing.Color.Gray;
             this.btnProductsBuys.Image = ((System.Drawing.Image)(resources.GetObject("btnProductsBuys.Image")));
             this.btnProductsBuys.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnProductsBuys.Location = new System.Drawing.Point(287, 30);
+            this.btnProductsBuys.Location = new System.Drawing.Point(242, 28);
             this.btnProductsBuys.Margin = new System.Windows.Forms.Padding(5);
             this.btnProductsBuys.Name = "btnProductsBuys";
-            this.btnProductsBuys.Size = new System.Drawing.Size(181, 66);
+            this.btnProductsBuys.Size = new System.Drawing.Size(153, 34);
             this.btnProductsBuys.TabIndex = 37;
             this.btnProductsBuys.Text = "VENTA";
             this.btnProductsBuys.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -219,14 +221,14 @@
             this.btnProductsInventory.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnProductsInventory.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btnProductsInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProductsInventory.Font = new System.Drawing.Font("Segoe UI Emoji", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductsInventory.Font = new System.Drawing.Font("Segoe UI Emoji", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProductsInventory.ForeColor = System.Drawing.Color.Gray;
             this.btnProductsInventory.Image = ((System.Drawing.Image)(resources.GetObject("btnProductsInventory.Image")));
             this.btnProductsInventory.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnProductsInventory.Location = new System.Drawing.Point(8, 30);
             this.btnProductsInventory.Margin = new System.Windows.Forms.Padding(5);
             this.btnProductsInventory.Name = "btnProductsInventory";
-            this.btnProductsInventory.Size = new System.Drawing.Size(224, 66);
+            this.btnProductsInventory.Size = new System.Drawing.Size(224, 32);
             this.btnProductsInventory.TabIndex = 36;
             this.btnProductsInventory.Text = "INVENTARIO";
             this.btnProductsInventory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

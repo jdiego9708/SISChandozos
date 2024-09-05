@@ -25,11 +25,19 @@
         public FrmPedido()
         {
             InitializeComponent();
-            //this.txtBusqueda.KeyPress += TxtBusqueda_OnTextoKeyPress;
+            this.txtBusqueda.KeyPress += TxtBusqueda_KeyPress;
             this.btnSave.Click += BtnSave_Click;
             this.Load += FrmPedido_Load;
             this.btnAddProduct.Click += BtnAddProduct_Click;
             this.btnRefresh.Click += BtnRefresh_Click;
+        }
+
+        private void TxtBusqueda_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                this.LoadProductos("PRODUCTO VENTA NOMBRE", this.txtBusqueda.Text.ToUpper());
+            }
         }
 
         private void BtnRefresh_Click(object sender, EventArgs e)

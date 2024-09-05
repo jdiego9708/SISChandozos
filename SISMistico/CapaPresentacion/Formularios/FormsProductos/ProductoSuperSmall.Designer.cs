@@ -52,11 +52,11 @@
             this.txtInformacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtInformacion.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInformacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtInformacion.Location = new System.Drawing.Point(113, 14);
+            this.txtInformacion.Location = new System.Drawing.Point(110, 14);
             this.txtInformacion.Multiline = true;
             this.txtInformacion.Name = "txtInformacion";
             this.txtInformacion.ReadOnly = true;
-            this.txtInformacion.Size = new System.Drawing.Size(230, 100);
+            this.txtInformacion.Size = new System.Drawing.Size(227, 100);
             this.txtInformacion.TabIndex = 40;
             this.txtInformacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -71,7 +71,7 @@
             this.btnNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNext.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext.Location = new System.Drawing.Point(349, 40);
+            this.btnNext.Location = new System.Drawing.Point(350, 39);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(50, 50);
             this.btnNext.TabIndex = 41;
@@ -97,7 +97,7 @@
             this.Controls.Add(this.pxImagen);
             this.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "ProductoSuperSmall";
             this.Size = new System.Drawing.Size(407, 119);
             ((System.ComponentModel.ISupportInitialize)(this.pxImagen)).EndInit();
