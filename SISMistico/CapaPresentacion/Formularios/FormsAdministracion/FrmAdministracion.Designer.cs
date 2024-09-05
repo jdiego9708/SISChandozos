@@ -36,8 +36,8 @@
             this.btnAddIngreso = new System.Windows.Forms.Button();
             this.btnAddGasto = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.graphicsVentas1 = new CapaPresentacion.Formularios.FormsEstadisticas.FormEstadisticasIniciales.GraphicsVentas();
             this.graphicsVentas2 = new CapaPresentacion.Formularios.FormsEstadisticas.FormEstadisticasIniciales.GraphicsVentas();
+            this.graphicsVentas1 = new CapaPresentacion.Formularios.FormsEstadisticas.FormEstadisticasIniciales.GraphicsVentas();
             this.gbTurno.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -74,7 +74,7 @@
             this.groupBox2.Controls.Add(this.btnAddNovedad);
             this.groupBox2.Controls.Add(this.btnAddIngreso);
             this.groupBox2.Controls.Add(this.btnAddGasto);
-            this.groupBox2.Location = new System.Drawing.Point(1251, -4);
+            this.groupBox2.Location = new System.Drawing.Point(584, -4);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
@@ -146,24 +146,15 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox3.Controls.Add(this.graphicsVentas2);
             this.groupBox3.Controls.Add(this.graphicsVentas1);
-            this.groupBox3.Location = new System.Drawing.Point(584, -4);
+            this.groupBox3.Location = new System.Drawing.Point(805, -4);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(663, 748);
+            this.groupBox3.Size = new System.Drawing.Size(628, 748);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Estadísticas";
-            // 
-            // graphicsVentas1
-            // 
-            this.graphicsVentas1.BackColor = System.Drawing.Color.White;
-            this.graphicsVentas1.Font = new System.Drawing.Font("Segoe UI Emoji", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.graphicsVentas1.Location = new System.Drawing.Point(8, 19);
-            this.graphicsVentas1.Margin = new System.Windows.Forms.Padding(6);
-            this.graphicsVentas1.Name = "graphicsVentas1";
-            this.graphicsVentas1.Size = new System.Drawing.Size(648, 361);
-            this.graphicsVentas1.TabIndex = 0;
+            this.groupBox3.Visible = false;
             // 
             // graphicsVentas2
             // 
@@ -174,6 +165,16 @@
             this.graphicsVentas2.Name = "graphicsVentas2";
             this.graphicsVentas2.Size = new System.Drawing.Size(648, 361);
             this.graphicsVentas2.TabIndex = 1;
+            // 
+            // graphicsVentas1
+            // 
+            this.graphicsVentas1.BackColor = System.Drawing.Color.White;
+            this.graphicsVentas1.Font = new System.Drawing.Font("Segoe UI Emoji", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.graphicsVentas1.Location = new System.Drawing.Point(8, 19);
+            this.graphicsVentas1.Margin = new System.Windows.Forms.Padding(6);
+            this.graphicsVentas1.Name = "graphicsVentas1";
+            this.graphicsVentas1.Size = new System.Drawing.Size(648, 361);
+            this.graphicsVentas1.TabIndex = 0;
             // 
             // FrmAdministracion
             // 
