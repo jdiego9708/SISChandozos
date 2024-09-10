@@ -417,13 +417,14 @@ namespace CapaPresentacion.Formularios.FormsProductos
 
             FrmAddGroupProduct frmAddGroupProduct = new FrmAddGroupProduct()
             {
+                WindowState = FormWindowState.Maximized,
                 StartPosition = FormStartPosition.CenterScreen,
                 MaximizeBox = false,
                 MinimizeBox = false,
                 ProductSelected = product,
             };
             frmAddGroupProduct.OnSaveGroupSuccess += FrmAddGroupProduct_OnSaveGroupSuccess;
-            frmAddGroupProduct.BuscarProductos(this.Products);
+            frmAddGroupProduct.BuscarProductos("ALL PRODUCTS INVENTORY WITH GASEOSAS", "");
             frmAddGroupProduct.ShowDialog();
         }
         private void FrmAddGroupProduct_OnSaveGroupSuccess(object sender, EventArgs e)

@@ -25,13 +25,21 @@ namespace CapaPresentacion.Formularios.FormsGroupsProducts
             InitializeComponent();
             this.Load += FrmAddGroupProduct_Load;
             this.btnSave.Click += BtnSave_Click;
+
+            this.txtSearchProducts.KeyPress += TxtSearchProducts_KeyPress;
         }
 
+        private void TxtSearchProducts_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                this.BuscarProductos("ALL PRODUCTS INVENTORY WITH GASEOSAS NAME", this.txtSearchProducts.Text.ToUpper().Trim());
+            }
+        }
         private void BtnSave_Click(object sender, EventArgs e)
         {
             this.SaveDetails();
         }
-
         private void FrmAddGroupProduct_Load(object sender, EventArgs e)
         {
             this.LoadCategorias("CATALOGO PADRE", "TIPOS DE PRODUCTOS");
@@ -77,7 +85,7 @@ namespace CapaPresentacion.Formularios.FormsGroupsProducts
                 this.ControlsCustom = controlsCustom;
 
                 this.panelProductos.BackgroundImage = null;
-                //this.panelProductos.AddArrayControl(controls);
+                this.panelProductos.AddArrayControl(controls);
             }
             catch (Exception ex)
             {
@@ -85,7 +93,7 @@ namespace CapaPresentacion.Formularios.FormsGroupsProducts
                     "Hubo un error con la tabla de datos", ex.Message);
             }
         }
-        private void BuscarProductos(string tipo_busqueda, string texto_busqueda)
+        public void BuscarProductos(string tipo_busqueda, string texto_busqueda)
         {
             try
             {
@@ -136,7 +144,6 @@ namespace CapaPresentacion.Formularios.FormsGroupsProducts
                     "Hubo un error con la tabla de datos", ex.Message);
             }
         }
-
         private void ProductoSmall_OnBtnNextClick(object sender, EventArgs e)
         {
             Productos producto = (Productos)sender;
@@ -259,18 +266,7 @@ namespace CapaPresentacion.Formularios.FormsGroupsProducts
 
             TipoProductoSelected = catalogo;
 
-            if (this.ControlsCustom == null)
-                return;
-
-            if (this.ControlsCustom.Count < 1)
-                return;
-
-            var findUsersControls = this.ControlsCustom.Where(x => x.ProductSelected.Id_tipo_producto == catalogo.Id_tipo).ToList();
-
-            List<UserControl> userSControls = findUsersControls.Cast<UserControl>().ToList();
-
-            this.panelProductos.clearDataSource();
-            this.panelProductos.AddArrayControl(userSControls);
+            this.BuscarProductos("ALL PRODUCTS INVENTORY WITH GASEOSAS ID TYPE", catalogo.Id_tipo.ToString());
         }
         public List<FormsProductos.ProductoSuperSmall> ControlsCustom { get; set; }
         public List<Productos> Products { get; set; }

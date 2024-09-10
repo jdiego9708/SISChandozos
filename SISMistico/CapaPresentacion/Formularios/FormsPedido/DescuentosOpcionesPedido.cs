@@ -118,7 +118,7 @@ namespace CapaPresentacion.Formularios.FormsPedido
             this.panelMetodosPago.clearDataSource();
 
             List<UserControl> controls = new List<UserControl>();
-            foreach(MetodoPagoModel metodo in metodos)
+            foreach (MetodoPagoModel metodo in metodos)
             {
                 MetodoPagoSmall metodoPagoSmall = new MetodoPagoSmall
                 {
@@ -147,22 +147,25 @@ namespace CapaPresentacion.Formularios.FormsPedido
                 {
                     if (metodo.chkMetodo.Checked)
                     {
-                        if (decimal.TryParse(Convert.ToString(metodo.txtValor.Tag), out decimal valor))
+                        if (decimal.TryParse(metodo.maskedTextBox1.Text, out decimal valor))
                         {
-                            metodos_pago.Add(new MetodoPagoModel
+                            if (valor != 0)
                             {
-                                MetodoPago = metodo.chkMetodo.Text.ToUpper(),
-                                Vaucher = string.Empty,
-                                ValorPago = valor,
-                            });
-                            total_valores += valor;
-                            cantidad_metodos_pago += 1;
+                                metodos_pago.Add(new MetodoPagoModel
+                                {
+                                    MetodoPago = metodo.chkMetodo.Text.ToUpper(),
+                                    Vaucher = string.Empty,
+                                    ValorPago = valor,
+                                });
+                                total_valores += valor;
+                                cantidad_metodos_pago += 1;
+                            }
                         }
                         else
                         {
                             //Mensajes.MensajeInformacion("Verifique los valores en métodos de pago");
                             return false;
-                        }                      
+                        }
                     }
                 }
             }
@@ -369,14 +372,13 @@ namespace CapaPresentacion.Formularios.FormsPedido
         {
             if (this.panelMetodosPago.Controls.Count > 0)
             {
-                foreach(UserControl control in this.panelMetodosPago.controlsUser)
+                foreach (UserControl control in this.panelMetodosPago.controlsUser)
                 {
                     if (control is MetodoPagoSmall metodo)
                     {
                         if (metodo.MetodoPago.MetodoPago.Equals("EFECTIVO"))
                         {
-                            metodo.txtValor.Tag = this.Total;
-                            metodo.txtValor.Text = this.Total.ToString("C").Replace(",00", "");
+                            metodo.maskedTextBox1.Text = this.Total.ToString("C").Replace(",00", "");
                         }
                     }
                 }

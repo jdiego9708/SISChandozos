@@ -128,7 +128,7 @@ namespace CapaPresentacion.Formularios.FormsPedido
 
             if (producto.Producto.Last_stock != null)
             {
-                info.Append($" Stock {producto.Producto.Last_stock.Amount_stock} {producto.Producto.Last_stock.Type_medition}");
+                //info.Append($" Stock {producto.Producto.Last_stock.Amount_stock} {producto.Producto.Last_stock.Type_medition}");
             }
 
             this.txtInfo.Text = info.ToString();

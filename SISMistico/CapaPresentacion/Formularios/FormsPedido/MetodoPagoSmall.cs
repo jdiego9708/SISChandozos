@@ -15,9 +15,6 @@ namespace CapaPresentacion.Formularios.FormsPedido
         public MetodoPagoSmall()
         {
             InitializeComponent();
-            this.txtValor.KeyPress += Txt_KeyPress;
-            this.txtValor.GotFocus += Txt_GotFocus;
-            this.txtValor.LostFocus += Txt_LostFocus;
             this.chkMetodo.CheckedChanged += ChkMetodo_CheckedChanged;
         }
 
@@ -28,8 +25,7 @@ namespace CapaPresentacion.Formularios.FormsPedido
             {
                 if (chk.Text.Equals("EFECTIVO"))
                 {
-                    this.txtValor.Tag = this.Total;
-                    this.txtValor.Text = this.Total.ToString("C").Replace(",00", "");
+                    this.maskedTextBox1.Text = this.Total.ToString("C").Replace(",00", "");
                 }
             }
         }
@@ -84,8 +80,7 @@ namespace CapaPresentacion.Formularios.FormsPedido
         private void AsignarDatos(MetodoPagoModel metodo)
         {
             this.chkMetodo.Text = metodo.MetodoPago;
-            this.txtValor.Text = 0.ToString("C").Replace(",00", "");
-            this.txtValor.Tag = 0;
+            this.maskedTextBox1.Text = 0.ToString("C").Replace(",00", "");
         }
 
         private MetodoPagoModel _metodoPago;

@@ -42,7 +42,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(312, 11);
+            this.panel1.Size = new System.Drawing.Size(296, 11);
             this.panel1.TabIndex = 30;
             // 
             // txtInfo
@@ -58,7 +58,7 @@
             this.txtInfo.Location = new System.Drawing.Point(5, 16);
             this.txtInfo.Multiline = true;
             this.txtInfo.Name = "txtInfo";
-            this.txtInfo.Size = new System.Drawing.Size(255, 81);
+            this.txtInfo.Size = new System.Drawing.Size(239, 57);
             this.txtInfo.TabIndex = 31;
             // 
             // btnDelete
@@ -74,7 +74,7 @@
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Location = new System.Drawing.Point(266, 17);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(40, 40);
+            this.btnDelete.Size = new System.Drawing.Size(25, 25);
             this.btnDelete.TabIndex = 43;
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
@@ -89,9 +89,9 @@
             this.btnEditCantidad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnEditCantidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditCantidad.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditCantidad.Location = new System.Drawing.Point(266, 61);
+            this.btnEditCantidad.Location = new System.Drawing.Point(266, 45);
             this.btnEditCantidad.Name = "btnEditCantidad";
-            this.btnEditCantidad.Size = new System.Drawing.Size(40, 40);
+            this.btnEditCantidad.Size = new System.Drawing.Size(25, 25);
             this.btnEditCantidad.TabIndex = 44;
             this.btnEditCantidad.UseVisualStyleBackColor = true;
             // 
@@ -108,7 +108,7 @@
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "ProductInventoryAddSmall";
-            this.Size = new System.Drawing.Size(312, 101);
+            this.Size = new System.Drawing.Size(296, 77);
             this.ResumeLayout(false);
             this.PerformLayout();
 

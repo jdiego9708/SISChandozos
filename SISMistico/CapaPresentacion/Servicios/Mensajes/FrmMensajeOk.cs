@@ -18,7 +18,7 @@ namespace CapaPresentacion
         private void FrmMensajeOk_Load(object sender, EventArgs e)
         {
             this.txtMensaje.Text = Mensaje;
-            this.timer1.Interval = 250;
+            this.timer1.Interval = 100;
             this.timer1.Start();
         }
 

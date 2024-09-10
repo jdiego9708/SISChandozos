@@ -32,8 +32,8 @@ namespace CapaPresentacion.Formularios.FormsPedido
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.chkMetodo = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtValor = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -64,7 +64,7 @@ namespace CapaPresentacion.Formularios.FormsPedido
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txtValor);
+            this.groupBox2.Controls.Add(this.maskedTextBox1);
             this.groupBox2.Location = new System.Drawing.Point(162, 12);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.groupBox2.Name = "groupBox2";
@@ -73,22 +73,6 @@ namespace CapaPresentacion.Formularios.FormsPedido
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Valor";
-            // 
-            // txtValor
-            // 
-            this.txtValor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtValor.BackColor = System.Drawing.Color.White;
-            this.txtValor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtValor.Font = new System.Drawing.Font("Segoe UI Emoji", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(0)))), ((int)(((byte)(85)))));
-            this.txtValor.Location = new System.Drawing.Point(4, 31);
-            this.txtValor.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(135, 36);
-            this.txtValor.TabIndex = 0;
-            this.txtValor.Tag = "0";
-            this.txtValor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel1
             // 
@@ -101,6 +85,19 @@ namespace CapaPresentacion.Formularios.FormsPedido
             this.panel1.Size = new System.Drawing.Size(305, 9);
             this.panel1.TabIndex = 0;
             // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.BackColor = System.Drawing.Color.White;
+            this.maskedTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskedTextBox1.Font = new System.Drawing.Font("Segoe UI Emoji", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.maskedTextBox1.Location = new System.Drawing.Point(8, 30);
+            this.maskedTextBox1.Mask = "$999,999";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(128, 29);
+            this.maskedTextBox1.TabIndex = 0;
+            this.maskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // MetodoPagoSmall
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -111,7 +108,7 @@ namespace CapaPresentacion.Formularios.FormsPedido
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "MetodoPagoSmall";
             this.Size = new System.Drawing.Size(305, 89);
             this.groupBox1.ResumeLayout(false);
@@ -128,6 +125,6 @@ namespace CapaPresentacion.Formularios.FormsPedido
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.CheckBox chkMetodo;
-        public System.Windows.Forms.TextBox txtValor;
+        public System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }

@@ -61,7 +61,7 @@ namespace CapaPresentacion.Formularios.FormsProductos
             if (!string.IsNullOrEmpty(producto.Descripcion_producto))
                 info.Append($" | {producto.Descripcion_producto} | "); 
 
-            this.txtInformacion.Text = info.ToString();
+            this.txtInformacion.Text = info.ToString() + " | ID: " + producto.Id_producto;
 
             if (producto.Last_stock != null)
             {

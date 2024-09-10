@@ -107,11 +107,6 @@ namespace CapaPresentacion.Formularios.FormsEstadisticas
                 Turno turno = new Turno(dtEstadistica.Rows[0]);
                 id_turno = "Identificación del turno: " + turno.Id_turno.ToString();
 
-                //if (!isRango)
-                //    resumenResultados.Append("Fecha: ").Append(turno.Fecha_turno.ToLongDateString()).Append(Environment.NewLine);
-                //else
-                //    resumenResultados.Append("Entre ").Append(date1.ToLongDateString() + " y ").Append(date2.ToLongDateString()).Append(" se registra la siguiente información:").Append(Environment.NewLine);
-
                 resumenResultados.Append("Total ingresos: ").Append(turno.Total_ingresos.ToString("C").Replace(",00", "")).Append(Environment.NewLine);
 
                 if (this.chkInfoGastos.Checked)
@@ -127,7 +122,7 @@ namespace CapaPresentacion.Formularios.FormsEstadisticas
                 if (this.chkInfoDetalleVentas.Checked)
                 {
                     List<TipoResumen> resumen = new List<TipoResumen>();
-                    //PLATOS Y BEBIDAS
+
                     foreach (DataRow row in dtDetalle.Rows)
                     {
                         int id_tipo = Convert.ToInt32(row["Id_tipo"]);
